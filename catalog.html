@@ -20,7 +20,7 @@
         <li class="site-nav__item">
           <a href="#" class="site-nav__link">Клиеты</a>
         </li>
-        <li class="site-nav__item">
+        <li class="site-nav__item site-nav__item--current">
           <a href="#" class="site-nav__link">Магазин</a>
         </li>
         <li class="site-nav__item">
@@ -37,6 +37,184 @@
 
   <main>
     <h1 class="inner-page__title">Магазин готовых шаблонов</h1>
+    <section class="filters">
+      <h2 class="filters__title">Фильтры</h2>
+      <form class="filters__form" action="index.html" method="post">
+        <!-- Фильр по цене -->
+        <fieldset class="filters__grou price-filter">
+          <legend>Стоимость:</legend>
+          <div class="price-filter__range">
+            <!-- Здесь будут ползунки цены -->
+          </div>
+          <p>
+            <input class="price-filter__min" id="filter-min-price" type="text" name="min-price">
+            <label class="visually-hidden" for="filter-min-price">Минимальная цена</label>
+            &mdash;
+            <input class="price-filter__man" id="filter-max-price" type="text" name="max-price">
+            <label class="visually-hidden" for="filter-max-price">Максимальная цена</label>
+          </p>
+        </fieldset>
+        <!-- Фильтр по типу сетки -->
+        <fieldset class="filters__group">
+          <legend>Сетка:</legend>
+          <ul class="filters__list">
+            <li class="filters__item">
+              <input class="filters__radio" id="adaptive-layout" type="radio" name="layout-radio">
+              <label for="adaptive-layout">Адаптивная</label>
+            </li>
+            <li class="filters__item">
+              <input class="filters__radio" id="fixed-layout" type="radio" name="layout-radio">
+              <label for="fixed-layout">Фиксированная</label>
+            </li>
+            <li class="filters__item">
+              <input class="filters__radio" id="flex-layout" type="radio" name="layout-radio">
+              <label for="flex-layout">Резиновая</label>
+            </li>
+          </ul>
+
+        </fieldset>
+        <!-- Фильтр по особенностям -->
+        <fieldset class="filters__group">
+          <legend>Особенности:</legend>
+          <ul class="filters__list">
+            <li class="filters__item">
+              <input class="filters__checkbox" id="block-slider" type="checkbox" name="specificity-checkbox">
+              <label for="block-slider">Слайдер</label>
+            </li>
+            <li class="filters__item">
+              <input class="filters__checkbox" id="block-features" type="checkbox" name="specificity-checkbox">
+              <label for="block-features">Блок приемуществ</label>
+            </li>
+            <li class="filters__item">
+              <input class="filters__checkbox" id="block-news" type="checkbox" name="specificity-checkbox">
+              <label for="block-news">Новости</label>
+            </li>
+            <li class="filters__item">
+              <input class="filters__checkbox" id="block-gallery" type="checkbox" name="specificity-checkbox">
+              <label for="block-gallery">Галерея</label>
+            </li>
+            <li class="filters__item">
+              <input class="filters__checkbox" id="block-cart" type="checkbox" name="specificity-checkbox">
+              <label for="block-cart">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filters__btn btn" type="submit">Показать</button>
+      </form>
+    </section>
+    <!-- Каталог товаров -->
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог шаблонов</h2>
+      <!-- меню сортировки -->
+      <div class="catalog__sort sorting">
+        <p class="sorting__title">Сортировать:</p>
+        <ul class="sorting__nav sorting-nav">
+          <li class="sorting-nav__item">
+            <a class="sorting-nav__by-price">По цене</a>
+          </li>
+          <li class="sorting-nav__item">
+            <a class="sorting-nav__by-type">По типу</a>
+          </li>
+          <li class="sorting-nav__item">
+            <a class="sorting-nav__by-name">По названию</a>
+          </li>
+          <li class="sorting-nav__item">
+            <span class="sorting-nav__toggle sorting-nav__toggle--up">По возрастанию</span>
+            <span class="sorting-nav__toggle sorting-nav__toggle--down">По убыванию</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Список товаров -->
+      <ul class="catalog__list products">
+        <li class="products__item">
+          <p class="products__image">
+            <img width="360" height="576" src="img/sedona-screenshot.jpg" alt="Sedona - Информационный сайт для туристов">
+          </p>
+          <div class="products__info">
+            <h3 class="products__title">Sedona</h3>
+            <p class="products__desc">
+              Информационный сайт для туристов
+            </p>
+            <a class="products__buy btn  btn--red" href="#">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="products__item">
+          <p class="products__image">
+            <img width="360" height="576" src="img/pink-screenshot.jpg" alt="Pink App - Продуктовый лендинг приложения для iOS и Android">
+          </p>
+          <div class="products__info">
+            <h3 class="products__title">Pink App</h3>
+            <p class="products__desc">
+              Продуктовый лендинг приложения для iOS и Android
+            </p>
+            <a class="products__buy btn  btn--red" href="#">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="products__item">
+          <p class="products__image">
+            <img width="360" height="576" src="img/barbershop-screenshot.jpg" alt="Barbershop - Сайт салона красоты. Для мужчин, да.">
+          </p>
+          <div class="products__info">
+            <h3 class="products__title">Barbershop</h3>
+            <p class="products__desc">
+              Сайт салона красоты. Для мужчин, да.
+            </p>
+            <a class="products__buy btn  btn--red" href="#">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="products__item">
+          <p class="products__image">
+            <img width="360" height="576" src="img/mishka-screenshot.jpg" alt="Mishka - Информационный сайт для туристов">
+          </p>
+          <div class="products__info">
+            <h3 class="products__title">Mishka</h3>
+            <p class="products__desc">
+              Интернет-магазин вязаных игрушек
+            </p>
+            <a class="products__buy btn  btn--red" href="#">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="products__item">
+          <p class="products__image">
+            <img width="360" height="576" src="img/A-Plus-screenshot.jpg" alt="A Plus - Лендинг курсов повышения квалификации">
+          </p>
+          <div class="products__info">
+            <h3 class="products__title">A Plus</h3>
+            <p class="products__desc">
+              Лендинг курсов повышения квалификации
+            </p>
+            <a class="products__buy btn  btn--red" href="#">9 900 руб.</a>
+          </div>
+        </li>
+        <li class="products__item">
+          <p class="products__image">
+            <img width="360" height="576" src="img/kvast-screenshot.jpg" alt="Кваст - Промо-сайт производителя крафтового кваса">
+          </p>
+          <div class="products__info">
+            <h3 class="products__title">Кваст</h3>
+            <p class="products__desc">
+              Промо-сайт производителя крафтового кваса
+            </p>
+            <a class="products__buy btn  btn--red" href="#">9 900 руб.</a>
+          </div>
+        </li>
+      </ul>
+      <!-- Постраничная навигация -->
+      <ul class="catalog__pagination pagination">
+        <li class="pagination__item pagination__item--current">
+          <a class="pagination__link" href="#">1</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">2</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">3</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">Следующая</a>
+        </li>
+      </ul>
+    </section>
   </main>
   <footer class="main-footer">
     <section class="main-footer__contacts contacts">
