@@ -4,34 +4,27 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="inner-page">
   <!--------------------- Шапка ---------------------->
   <header class="main-header">
-    <nav class="main-nav">
+    <nav class="main-nav container">
       <a class="main-header__logo" href="index.html">
-        <img width="160" height="65" src="img/site-logo.svg" alt="Логотип Нёрдс">
+        <img class="main-header__logo-image" width="160" height="65" src="img/site-logo.svg" alt="Логотип Нёрдс">
       </a>
-      <ul class="site-nav">
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="#">Студия</a>
-        </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="#">Клиеты</a>
-        </li>
-        <li class="site-nav__item site-nav__item--current">
-          <a class="site-nav__link" href="#">Магазин</a>
-        </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <ul class="user-nav">
-        <li class="user-nav__item">
-          <a class="user-nav__link" href="#">Корзина</a>
-        </li>
-      </ul>
+      <div class="main-nav__list site-nav">
+        <a class="site-nav__link" href="#">Студия</a>
+        <a class="site-nav__link" href="#">Клиеты</a>
+        <a class="site-nav__link  site-nav__link--current">Магазин</a>
+        <a class="site-nav__link" href="#">Контакты</a>
+      </div>
+      <div class="main-nav__list user-nav">
+        <a class="user-nav__link user-nav__link--cart" href="#">Корзина</a>
+      </div>
     </nav>
   </header>
 
@@ -39,35 +32,40 @@
     <h1 class="inner-page__title">Магазин готовых шаблонов</h1>
     <section class="filters">
       <h2 class="filters__title">Фильтры</h2>
-      <form class="filters__form" action="index.html" method="post">
+      <form class="filters__form" action="index.html" method="get">
         <!-- Фильр по цене -->
-        <fieldset class="filters__grou price-filter">
+        <fieldset class="filters__group price-filter">
           <legend>Стоимость:</legend>
-          <div class="price-filter__range">
-            <!-- Здесь будут ползунки цены -->
-          </div>
-          <p>
-            <input class="price-filter__min" id="filter-min-price" type="text" name="min-price">
-            <label class="visually-hidden" for="filter-min-price">Минимальная цена</label>
-            &mdash;
-            <input class="price-filter__man" id="filter-max-price" type="text" name="max-price">
-            <label class="visually-hidden" for="filter-max-price">Максимальная цена</label>
-          </p>
+          <div class="price-filter__range-controls range-controls">
+             <!-- Здесь будут ползунки цены -->
+             <div class="range-controls__scale">
+               <div class="range-controls__bar"></div>
+             </div>
+             <div class="range-controls__toggle range-controls__toggle--min"></div>
+             <div class="range-controls__toggle range-controls__toggle--max"></div>
+           </div>
+           <p class="price-filter__value-range">
+             <input class="price-filter__min" id="filter-min-price" type="text" name="min-price" value="0">
+             <label class="visually-hidden" for="filter-min-price">Минимальная цена</label>
+             &mdash;
+             <input class="price-filter__max" id="filter-max-price" type="text" name="max-price" value="30000">
+             <label class="visually-hidden" for="filter-max-price">Максимальная цена</label>
+           </p>
         </fieldset>
         <!-- Фильтр по типу сетки -->
         <fieldset class="filters__group">
           <legend>Сетка:</legend>
           <ul class="filters__list">
             <li class="filters__item">
-              <input class="filters__radio" id="adaptive-layout" type="radio" name="layout-radio">
+              <input class="filters__radio visually-hidden" id="adaptive-layout" type="radio" name="layout-radio">
               <label for="adaptive-layout">Адаптивная</label>
             </li>
             <li class="filters__item">
-              <input class="filters__radio" id="fixed-layout" type="radio" name="layout-radio">
+              <input class="filters__radio visually-hidden" id="fixed-layout" type="radio" name="layout-radio">
               <label for="fixed-layout">Фиксированная</label>
             </li>
             <li class="filters__item">
-              <input class="filters__radio" id="flex-layout" type="radio" name="layout-radio">
+              <input class="filters__radio visually-hidden" id="flex-layout" type="radio" name="layout-radio">
               <label for="flex-layout">Резиновая</label>
             </li>
           </ul>
@@ -78,7 +76,7 @@
           <legend>Особенности:</legend>
           <ul class="filters__list">
             <li class="filters__item">
-              <input class="filters__checkbox" id="block-slider" type="checkbox" name="specificity-checkbox">
+              <input class="filters__checkbox visually-hidden" id="block-slider" type="checkbox" name="specificity-checkbox">
               <label for="block-slider">Слайдер</label>
             </li>
             <li class="filters__item">
@@ -86,15 +84,15 @@
               <label for="block-features">Блок приемуществ</label>
             </li>
             <li class="filters__item">
-              <input class="filters__checkbox" id="block-news" type="checkbox" name="specificity-checkbox">
+              <input class="filters__checkbox visually-hidden" id="block-news" type="checkbox" name="specificity-checkbox">
               <label for="block-news">Новости</label>
             </li>
             <li class="filters__item">
-              <input class="filters__checkbox" id="block-gallery" type="checkbox" name="specificity-checkbox">
+              <input class="filters__checkbox visually-hidden" id="block-gallery" type="checkbox" name="specificity-checkbox">
               <label for="block-gallery">Галерея</label>
             </li>
             <li class="filters__item">
-              <input class="filters__checkbox" id="block-cart" type="checkbox" name="specificity-checkbox">
+              <input class="filters__checkbox visually-hidden" id="block-cart" type="checkbox" name="specificity-checkbox">
               <label for="block-cart">Корзина</label>
             </li>
           </ul>
@@ -108,21 +106,13 @@
       <!-- меню сортировки -->
       <div class="catalog__sort sorting">
         <p class="sorting__title">Сортировать:</p>
-        <ul class="sorting__nav sorting-nav">
-          <li class="sorting-nav__item">
-            <a class="sorting-nav__by-price">По цене</a>
-          </li>
-          <li class="sorting-nav__item">
-            <a class="sorting-nav__by-type">По типу</a>
-          </li>
-          <li class="sorting-nav__item">
-            <a class="sorting-nav__by-name">По названию</a>
-          </li>
-          <li class="sorting-nav__item">
-            <span class="sorting-nav__toggle sorting-nav__toggle--up">По возрастанию</span>
-            <span class="sorting-nav__toggle sorting-nav__toggle--down">По убыванию</span>
-          </li>
-        </ul>
+        <div class="sorting__nav">
+          <a class="sorting__item sorting__item--by-price">По цене</a>
+          <a class="sorting__item sorting__item--by-type">По типу</a>
+          <a class="sorting__item sorting__item--by-name">По названию</a>
+          <a href="#" class="sorting__toggle sorting__toggle--up visually-hidden">По возрастанию</a>
+          <a href="#" class="sorting__toggle sorting__toggle--down visually-hidden">По убыванию</a>
+        </div>
       </div>
       <!-- Список товаров -->
       <ul class="catalog__list products">
@@ -135,7 +125,7 @@
             <p class="products__desc">
               Информационный сайт для туристов
             </p>
-            <a class="products__buy btn  btn--red" href="#">9 900 руб.</a>
+            <a class="products__buy btn btn--red" href="#">9 900 руб.</a>
           </div>
         </li>
         <li class="products__item">
@@ -219,7 +209,7 @@
   <footer class="main-footer">
     <section class="main-footer__contacts contacts">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <p class="contacts__map">
+      <p class="main-footer__map contacts__map">
         <img class="contacts__map-image" width="1725" height="808" src="img/map.png" alt="Карта как проехать">
       </p>
       <div class="contacts__desc">
@@ -229,27 +219,21 @@
         <address class="contacts__adress">
           191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8<br>
-          тел. +7 (812) 275-75-75
+          <a href="tel:+78122757575" class="contacts__phone">тел. +7 (812) 275-75-75</a>
         </address>
-        <a class="contacts__write-us contacts__btn btn" href="#">
+        <a class="contacts__write-us btn btn--red" href="#">
           Напишите нам
         </a>
       </div>
     </section>
     <div class="main-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vk" href="#">Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--fb" href="#">Фейсбук</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--inst" href="#">Инстаграм</a>
-        </li>
-      </ul>
-      <p class="main-footer__text">
-        <b class="main-footer__slogan">Давайте дружить, это выгодно!</b><br>
+      <div class="social__list">
+        <a class="social__link social__link--vk" href="#">Вконтакте</a>
+        <a class="social__link social__link--fb" href="#">Фейсбук</a>
+        <a class="social__link social__link--inst" href="#">Инстаграм</a>
+      </div>
+      <p class="social__text">
+        <b class="social__slogan">Давайте дружить, это выгодно!</b><br>
         Скидка 10% для друзей из социальных сетей.
       </p>
     </div>
