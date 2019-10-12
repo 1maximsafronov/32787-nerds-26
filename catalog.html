@@ -14,7 +14,7 @@
   <header class="main-header">
     <nav class="main-nav container">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" width="160" height="65" src="img/nerds-logo.svg" alt="Логотип Нёрдс">
+        <img class="main-header__logo-image" width="160" height="67" src="img/nerds-logo.svg" alt="Логотип Нёрдс">
       </a>
       <div class="main-nav__list site-nav">
         <a class="site-nav__link" href="#">Студия</a>
@@ -36,7 +36,7 @@
         <form class="filters__form" action="index.html" method="get">
           <!-- Фильр по цене -->
           <fieldset class="filters__group price-filter">
-            <legend class="filters__title">Стоимость:</legend>
+            <legend class="filters__title price-filter__title">Стоимость:</legend>
             <div class="price-filter__range-controls range-controls">
                <!-- Здесь будут ползунки цены -->
                <div class="range-controls__scale">
@@ -46,10 +46,9 @@
                <div class="range-controls__toggle range-controls__toggle--max"></div>
              </div>
              <p class="price-filter__value-range">
-               <input class="price-filter__min" id="filter-min-price" type="text" name="min-price" value="0">
+               От <input class="price-filter__min" id="filter-min-price" type="text" name="min-price" value="0">
                <label class="visually-hidden" for="filter-min-price">Минимальная цена</label>
-               &mdash;
-               <input class="price-filter__max" id="filter-max-price" type="text" name="max-price" value="30000">
+               До <input class="price-filter__max" id="filter-max-price" type="text" name="max-price" value="30000">
                <label class="visually-hidden" for="filter-max-price">Максимальная цена</label>
              </p>
           </fieldset>
@@ -58,16 +57,16 @@
             <legend class="filters__title">Сетка:</legend>
             <ul class="filters__list">
               <li class="filters__item">
-                <input class="filters__radio visually-hidden" id="adaptive-layout" type="radio" name="layout-radio">
-                <label for="adaptive-layout">Адаптивная</label>
+                <input class="filters__input-radio visually-hidden" id="adaptive-layout" type="radio" name="layout-radio">
+                <label class="filters__label-radio" for="adaptive-layout">Адаптивная</label>
               </li>
               <li class="filters__item">
-                <input class="filters__radio visually-hidden" id="fixed-layout" type="radio" name="layout-radio">
-                <label for="fixed-layout">Фиксированная</label>
+                <input class="filters__input-radio visually-hidden" id="fixed-layout" type="radio" name="layout-radio">
+                <label class="filters__label-radio" for="fixed-layout">Фиксированная</label>
               </li>
               <li class="filters__item">
-                <input class="filters__radio visually-hidden" id="flex-layout" type="radio" name="layout-radio">
-                <label for="flex-layout">Резиновая</label>
+                <input class="filters__input-radio visually-hidden" id="flex-layout" type="radio" name="layout-radio">
+                <label class="filters__label-radio" for="flex-layout">Резиновая</label>
               </li>
             </ul>
           </fieldset>
@@ -76,28 +75,28 @@
             <legend class="filters__title">Особенности:</legend>
             <ul class="filters__list">
               <li class="filters__item">
-                <input class="filters__checkbox visually-hidden" id="block-slider" type="checkbox" name="specificity-checkbox">
-                <label for="block-slider">Слайдер</label>
+                <input class="filters__input-checkbox visually-hidden" id="block-slider" type="checkbox" name="specificity-checkbox">
+                <label class="filters__label-checkbox" for="block-slider">Слайдер</label>
               </li>
               <li class="filters__item">
-                <input class="filters__checkbox" id="block-features" type="checkbox" name="specificity-checkbox">
-                <label for="block-features">Блок приемуществ</label>
+                <input class="filters__input-checkbox visually-hidden" id="block-features" type="checkbox" name="specificity-checkbox">
+                <label class="filters__label-checkbox" for="block-features">Блок приемуществ</label>
               </li>
               <li class="filters__item">
-                <input class="filters__checkbox visually-hidden" id="block-news" type="checkbox" name="specificity-checkbox">
-                <label for="block-news">Новости</label>
+                <input class="filters__input-checkbox visually-hidden" id="block-news" type="checkbox" name="specificity-checkbox">
+                <label class="filters__label-checkbox" for="block-news">Новости</label>
               </li>
               <li class="filters__item">
-                <input class="filters__checkbox visually-hidden" id="block-gallery" type="checkbox" name="specificity-checkbox">
-                <label for="block-gallery">Галерея</label>
+                <input class="filters__input-checkbox visually-hidden" id="block-gallery" type="checkbox" name="specificity-checkbox">
+                <label class="filters__label-checkbox" for="block-gallery">Галерея</label>
               </li>
               <li class="filters__item">
-                <input class="filters__checkbox visually-hidden" id="block-cart" type="checkbox" name="specificity-checkbox">
-                <label for="block-cart">Корзина</label>
+                <input class="filters__input-checkbox visually-hidden" id="block-cart" type="checkbox" name="specificity-checkbox">
+                <label class="filters__label-checkbox" for="block-cart">Корзина</label>
               </li>
             </ul>
           </fieldset>
-          <button class="filters__btn btn" type="submit">Показать</button>
+          <button class="filters__btn btn btn--gray" type="submit">Показать</button>
         </form>
       </section>
       <!-- Каталог товаров -->
@@ -107,11 +106,11 @@
         <div class="catalog__sort sorting">
           <p class="sorting__title">Сортировать:</p>
           <div class="sorting__nav">
-            <a class="sorting__item sorting__item--by-price">По цене</a>
-            <a class="sorting__item sorting__item--by-type">По типу</a>
-            <a class="sorting__item sorting__item--by-name">По названию</a>
-            <a href="#" class="sorting__toggle sorting__toggle--up visually-hidden">По возрастанию</a>
-            <a href="#" class="sorting__toggle sorting__toggle--down visually-hidden">По убыванию</a>
+            <a class="sorting__item sorting__item--by-price sorting__item--active" href="#">По цене</a>
+            <a class="sorting__item sorting__item--by-type" href="#">По типу</a>
+            <a class="sorting__item sorting__item--by-name"  href="#">По названию</a>
+            <a href="#" class="sorting__toggle sorting__toggle--down "><span class="visually-hidden">По возрастанию</span></a>
+            <a href="#" class="sorting__toggle sorting__toggle--up"><span class="visually-hidden">По убыванию</span></a>
           </div>
         </div>
         <!-- Список товаров -->
@@ -191,29 +190,29 @@
         </ul>
         <!-- Постраничная навигация -->
         <ul class="catalog__pagination pagination">
-          <li class="pagination__item pagination__item--current">
-            <a class="pagination__link" href="#">1</a>
+          <li class="pagination__item ">
+            <a class="pagination__link btn btn--gray pagination__link--current" href="#">1</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">2</a>
+            <a class="pagination__link btn btn--gray" href="#">2</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">3</a>
+            <a class="pagination__link btn btn--gray" href="#">3</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">Следующая</a>
+            <a class="pagination__link btn btn--gray pagination__link--next" href="#">Следующая</a>
           </li>
         </ul>
       </section>
     </div>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer container">
     <section class="main-footer__contacts contacts">
       <h2 class="visually-hidden">Как нас найти</h2>
       <p class="main-footer__map contacts__map">
         <img class="contacts__map-image" width="1400" height="416" src="img/map.png" alt="Карта как проехать">
       </p>
-      <iframe width="1400" height="416" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3042009455503!2d30.322961569200913!3d59.938639914249094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1570762971442!5m2!1sru!2sru"></iframe>
+      <iframe class="main-footer__map-frame contacts__map-frame" width="1400" height="416" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3042009455503!2d30.322961569200913!3d59.938639914249094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1570762971442!5m2!1sru!2sru"></iframe>
       <div class="contacts__desc">
         <h3 class="contacts__title">
           NЁRDS DESIGN STUDIO
@@ -221,18 +220,18 @@
         <address class="contacts__adress">
           191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8<br>
-          <a href="tel:+78122757575" class="contacts__phone">тел. +7 (812) 275-75-75</a>
         </address>
+        <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
         <a class="contacts__write-us btn btn--red" href="#">
           Напишите нам
         </a>
       </div>
     </section>
     <div class="main-footer__social social">
-      <div class="social__list">
-        <a class="social__link social__link--vk" href="#">Вконтакте</a>
-        <a class="social__link social__link--fb" href="#">Фейсбук</a>
-        <a class="social__link social__link--inst" href="#">Инстаграм</a>
+      <div class="main-footer__social-list social__list">
+        <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
+        <a class="social__link social__link--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
+        <a class="social__link social__link--inst" href="#"><span class="visually-hidden">Инстаграм</span></a>
       </div>
       <p class="social__text">
         <b class="social__slogan">Давайте дружить, это выгодно!</b><br>
