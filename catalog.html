@@ -6,7 +6,7 @@
   <title>HTML Academy: Нёрдс</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="inner-page">
@@ -120,7 +120,7 @@
               <img class="products__image" width="360" height="576" src="img/img-sedona.jpg" alt="Sedona - Информационный сайт для туристов">
             </p>
             <div class="products__info">
-              <h3 class="products__title">Sedona</h3>
+              <a href="#" class="products__title">Sedona</a>
               <p class="products__desc">
                 Информационный сайт для туристов
               </p>
@@ -132,7 +132,7 @@
               <img class="products__image" width="360" height="576" src="img/img-pink.jpg" alt="Pink App - Продуктовый лендинг приложения для iOS и Android">
             </p>
             <div class="products__info">
-              <h3 class="products__title">Pink App</h3>
+              <a href="#" class="products__title">Pink App</a>
               <p class="products__desc">
                 Продуктовый лендинг приложения для iOS и Android
               </p>
@@ -144,7 +144,7 @@
               <img class="products__image" width="360" height="576" src="img/img-barbershop.jpg" alt="Barbershop - Сайт салона красоты. Для мужчин, да.">
             </p>
             <div class="products__info">
-              <h3 class="products__title">Barbershop</h3>
+              <a href="#" class="products__title">Barbershop</a>
               <p class="products__desc">
                 Сайт салона красоты. Для мужчин, да.
               </p>
@@ -156,7 +156,7 @@
               <img class="products__image" width="360" height="576" src="img/img-mishka.jpg" alt="Mishka - Информационный сайт для туристов">
             </p>
             <div class="products__info">
-              <h3 class="products__title">Mishka</h3>
+              <a href="#" class="products__title">Mishka</a>
               <p class="products__desc">
                 Интернет-магазин вязаных игрушек
               </p>
@@ -168,7 +168,7 @@
               <img class="products__image" width="360" height="576" src="img/img-aplus.jpg" alt="A Plus - Лендинг курсов повышения квалификации">
             </p>
             <div class="products__info">
-              <h3 class="products__title">A Plus</h3>
+              <a href="#" class="products__title">A Plus</a>
               <p class="products__desc">
                 Лендинг курсов повышения квалификации
               </p>
@@ -240,22 +240,27 @@
     </div>
   </footer>
   <section class="modal modal-write-us">
-    <h2 class="modal-write-us">Напишите нам</h2>
+    <h2 class="modal-write-us__title">Напишите нам</h2>
     <form class="modal-write-us__form" action="index.html" method="post">
-      <p class="modal-write-us__name">
-        <label  for="">Ваше имя:</label>
-        <input type="text" name="username">
+      <div class="modal-write-us__wrapper">
+        <p class="modal-write-us__name">
+          <label class="modal-write-us__label"  for="username">Ваше имя:</label>
+          <input class="modal-write-us__input" type="text" name="username" id="username">
+        </p>
+        <p class="modal-write-us__email">
+          <label class="modal-write-us__label" for="useremail">Вашь e-mail:</label>
+          <input class="modal-write-us__input" type="email" name="useremail" id="useremail">
+        </p>
+      </div>
+      <p class="modal-write-us__textmessage">
+        <label class="modal-write-us__label" for="textmessage">Текст письма:</label>
+        <textarea class="modal-write-us__input modal-write-us__input--textmessage" name="textmessage" id="textmessage" cols="30" rows="10"></textarea>
       </p>
-      <p class="modal-write-us__email">
-        <label for="">Вашь e-mail:</label>
-        <input type="text" name="useremail">
-      </p>
-      <p>
-        <label for="">Текст письма:</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-      </p>
+      <button class="modal-write-us__btn btn btn--red" type="submit" name="sendmessage">Отправить</button>
     </form>
+    <button class="modal__close" type="button" name="closemodal"><span class="visually-hidden">Закрыть</span></button>
   </section>
+  <script src="js/script.js" type="text/javascript"></script>
 </body>
 
 </html>
