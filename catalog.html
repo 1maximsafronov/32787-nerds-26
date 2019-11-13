@@ -10,7 +10,6 @@
 </head>
 
 <body class="inner-page">
-  <!--------------------- Шапка ---------------------->
   <header class="main-header">
     <nav class="main-nav container">
       <a class="main-header__logo" href="index.html">
@@ -18,7 +17,7 @@
       </a>
       <div class="main-nav__list site-nav">
         <a class="site-nav__link" href="#">Студия</a>
-        <a class="site-nav__link" href="#">Клиеты</a>
+        <a class="site-nav__link" href="#">Клиенты</a>
         <a class="site-nav__link  site-nav__link--current">Магазин</a>
         <a class="site-nav__link" href="#">Контакты</a>
       </div>
@@ -46,10 +45,14 @@
                <div class="range-controls__toggle range-controls__toggle--max"></div>
              </div>
              <p class="price-filter__value-range">
-               От <input class="price-filter__min" id="filter-min-price" type="text" name="min-price" value="0">
-               <label class="visually-hidden" for="filter-min-price">Минимальная цена</label>
-               До <input class="price-filter__max" id="filter-max-price" type="text" name="max-price" value="30000">
-               <label class="visually-hidden" for="filter-max-price">Максимальная цена</label>
+               <label class="price-filter__min-value" for="filter-min-price">
+                 <span class="visually-hidden">Минимальная цена</span> От
+               </label>
+               <input class="price-filter__min" id="filter-min-price" type="text" name="min-price" value="0">
+               <label class="price-filter__max-value" for="filter-max-price">
+                 <span class="visually-hidden">Максимальная цена</span>До
+               </label>
+               <input class="price-filter__max" id="filter-max-price" type="text" name="max-price" value="30000">
              </p>
           </fieldset>
           <!-- Фильтр по типу сетки -->
@@ -57,7 +60,7 @@
             <legend class="filters__title">Сетка:</legend>
             <ul class="filters__list">
               <li class="filters__item">
-                <input class="filters__input-radio visually-hidden" id="adaptive-layout" type="radio" name="layout-radio">
+                <input class="filters__input-radio visually-hidden" id="adaptive-layout" type="radio" name="layout-radio" checked>
                 <label class="filters__label-radio" for="adaptive-layout">Адаптивная</label>
               </li>
               <li class="filters__item">
@@ -75,7 +78,7 @@
             <legend class="filters__title">Особенности:</legend>
             <ul class="filters__list">
               <li class="filters__item">
-                <input class="filters__input-checkbox visually-hidden" id="block-slider" type="checkbox" name="specificity-checkbox">
+                <input class="filters__input-checkbox visually-hidden" id="block-slider" type="checkbox" name="specificity-checkbox" checked>
                 <label class="filters__label-checkbox" for="block-slider">Слайдер</label>
               </li>
               <li class="filters__item">
@@ -83,7 +86,7 @@
                 <label class="filters__label-checkbox" for="block-features">Блок приемуществ</label>
               </li>
               <li class="filters__item">
-                <input class="filters__input-checkbox visually-hidden" id="block-news" type="checkbox" name="specificity-checkbox">
+                <input class="filters__input-checkbox visually-hidden" id="block-news" type="checkbox" name="specificity-checkbox" checked>
                 <label class="filters__label-checkbox" for="block-news">Новости</label>
               </li>
               <li class="filters__item">
@@ -245,22 +248,22 @@
       <div class="modal-write-us__wrapper">
         <p class="modal-write-us__name">
           <label class="modal-write-us__label"  for="username">Ваше имя:</label>
-          <input class="modal-write-us__input" type="text" name="username" id="username">
+          <input class="modal-write-us__input" type="text" name="username" id="username" placeholder="Имя Фамилия">
         </p>
         <p class="modal-write-us__email">
           <label class="modal-write-us__label" for="useremail">Вашь e-mail:</label>
-          <input class="modal-write-us__input" type="email" name="useremail" id="useremail">
+          <input class="modal-write-us__input" type="email" name="useremail" id="useremail" placeholder="email@example.com">
         </p>
       </div>
       <p class="modal-write-us__textmessage">
         <label class="modal-write-us__label" for="textmessage">Текст письма:</label>
-        <textarea class="modal-write-us__input modal-write-us__input--textmessage" name="textmessage" id="textmessage" cols="30" rows="10"></textarea>
+        <textarea class="modal-write-us__input modal-write-us__input--textmessage" name="textmessage" id="textmessage" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </p>
       <button class="modal-write-us__btn btn btn--red" type="submit" name="sendmessage">Отправить</button>
     </form>
     <button class="modal__close" type="button" name="closemodal"><span class="visually-hidden">Закрыть</span></button>
   </section>
-  <script src="js/script.js" type="text/javascript"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
