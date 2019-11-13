@@ -104,9 +104,9 @@ body {
   text-align: center;
   background-color: #eeeeee;
   margin: 0;
-  padding-top: 75px;
-  padding-bottom: 111px;
-  margin-bottom: 60px;
+  padding-top: 79px;
+  padding-bottom: 107px;
+  margin-bottom: 55px;
 }
 
 .inner-page__container {
@@ -174,9 +174,10 @@ body {
 .user-nav__link {
   color: #000000;
   text-decoration: none;
-  padding-bottom: 6px;
   border-bottom: 2px solid transparent;
   margin-right: 45px;
+  padding-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .site-nav__link:hover,
@@ -771,7 +772,8 @@ body {
 }
 
 .catalog__sort {
-  margin-bottom: 58px;
+  margin-bottom: 55px;
+  padding-top: 5px;
 }
 
 .sorting {
@@ -784,6 +786,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: flex-end;
 }
 
 .sorting__title {
@@ -995,6 +998,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
 }
 
 .main-footer__social-list {
@@ -1067,7 +1071,9 @@ body {
   display: flex;
   margin-right: 12px;
 }
-
+.social__link:last-child{
+  margin-right: 0;
+}
 .social__link:hover {
   background-color: #e74246;
 }
@@ -1112,6 +1118,8 @@ body {
   margin: 0;
   color: #444444;
   line-height: 24px;
+  padding: 0;
+  margin-top: 8px;
 }
 
 .social__slogan {
@@ -1119,7 +1127,9 @@ body {
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
-  margin-bottom: 8px; }
+  padding: 0;
+  margin: 0;
+}
 
 .modal {
   display: none;
