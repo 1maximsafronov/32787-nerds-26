@@ -11,16 +11,16 @@
 
   text-decoration: none;
 
-  color: #000000;
+  color: $color-black;
   border-bottom: 2px solid transparent;
 
   &:hover {
-    color: #fb565a;
+    color: $color-red;
   }
 
   &:active {
     opacity: 0.3;
-    color: #000000;
+    color: $color-black;
   }
 
   &:last-child {
@@ -28,6 +28,6 @@
   }
 
   &--current {
-    border-bottom-color: #fb565a;
+    border-bottom-color: $color-red;
   }
 }

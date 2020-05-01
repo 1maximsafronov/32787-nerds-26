@@ -51,7 +51,7 @@
   margin: 0;
   margin-bottom: 40px;
 
-  color: #283136;
+  color: $text-color-primary;
 }
 
 .slider__btn {
@@ -77,7 +77,7 @@
   cursor: pointer;
 
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: $color-white;
 
   justify-content: center;
   align-items: center;

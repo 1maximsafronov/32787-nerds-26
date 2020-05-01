@@ -20,11 +20,11 @@
   }
 
   &:hover {
-    background-color: #e74246;
+    background-color: $color-red-dark;
   }
 
   &:active {
-    background-color: #d7373b;
+    background-color: $color-red-darker;
     box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 
     &::before {
@@ -78,7 +78,7 @@
   margin: 0;
   padding: 0;
 
-  color: #000000;
+  color: $color-black;
 
   font-size: 36px;
   font-weight: 700;

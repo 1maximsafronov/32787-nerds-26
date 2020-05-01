@@ -12,7 +12,7 @@
   margin-bottom: 14px;
   padding: 39px 21px;
 
-  background-color: #eeeeee;
+  background-color: $color-gray;
 }
 
 .price-filter__value-range {
@@ -21,7 +21,7 @@
   margin: 0;
   padding: 0;
 
-  color: #283136;
+  color: $text-color-primary;
 
   font-size: 16px;
   line-height: 22px;
@@ -42,7 +42,7 @@
   text-align: center;
 
   border: none;
-  background-color: #eeeeee;
+  background-color: $color-gray;
 
   font: inherit;
 }

@@ -22,9 +22,9 @@
     content: "";
 
     border-radius: 50%;
-    background-color: #ffffff;
-    box-shadow: 23px 0 0 0 #ffffff,
-      46px 0 0 0 #ffffff;
+    background-color: $color-white;
+    box-shadow: 23px 0 0 0 $color-white,
+      46px 0 0 0 $color-white;
   }
 
   &:hover {
@@ -59,7 +59,7 @@
   text-align: center;
 
   opacity: 0;
-  background-color: #eeeeee;
+  background-color: $color-gray;
 }
 
 .products__title {
@@ -71,7 +71,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  color: #000000;
+  color: $color-black;
 
   font-size: 18px;
   font-weight: 700;
@@ -83,7 +83,7 @@
 
   &:active {
     opacity: 0.3;
-    color: #000000;
+    color: $color-black;
   }
 }
 

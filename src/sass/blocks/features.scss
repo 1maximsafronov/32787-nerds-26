@@ -2,7 +2,7 @@
   margin-bottom: 40px;
   padding-bottom: 80px;
 
-  border-bottom: 2px solid #eeeeee;
+  border-bottom: 2px solid $color-gray;
 }
 
 .features__list {
@@ -43,7 +43,7 @@
   width: 260px;
   margin-bottom: 32px;
 
-  color: #283136;
+  color: $text-color-primary;
 }
 
 .features__btn {

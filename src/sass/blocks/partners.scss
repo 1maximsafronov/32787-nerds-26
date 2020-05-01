@@ -1,7 +1,7 @@
 .partners {
   padding-bottom: 28px;
 
-  border-bottom: 2px solid #eeeeee;
+  border-bottom: 2px solid $color-gray;
 }
 
 .partners__list {
@@ -33,7 +33,7 @@
     transform: translateY(-50%);
 
     opacity: 1;
-    background-color: #eeeeee;
+    background-color: $color-gray;
   }
 
   &:last-child {

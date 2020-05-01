@@ -32,7 +32,7 @@
   text-decoration: none;
 
   opacity: 0.3;
-  color: #000000;
+  color: $color-black;
 
   &:hover,
   &:focus {
@@ -57,10 +57,10 @@
     margin-right: 18px;
     margin-left: 22px;
 
-    border-top: 10px solid #000000;
+    border-top: 10px solid $color-black;
   }
 
   &--up {
-    border-bottom: 10px solid #000000;
+    border-bottom: 10px solid $color-black;
   }
 }
