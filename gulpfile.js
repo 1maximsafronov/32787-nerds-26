@@ -19,6 +19,11 @@ const autoprefixer = require("autoprefixer");
 
 const buildFolder = "build";
 
+
+gulp.task("publish", function () {
+  return ghpages.publish(buildFolder, function(err) {});
+});
+
 // npx gulp images
 gulp.task("images", function () {
   return gulp.src("src/img/**/*.{png,jph,svg}")
@@ -124,9 +129,6 @@ gulp.task("refresh", function (done) {
 
 
 
-gulp.task("build", gulp.series("clean", "copy", "css", "html", "jsmin"));
-gulp.task("start", gulp.series("build", "server"));
 
-// gulp.task("publish",["build"], function () {
-//   return ghpages.publish(buildFolder, function(err) {});
-// });
+gulp.task("build", gulp.series("clean", "html", "css", "jsmin", "copy"));
+gulp.task("start", gulp.series("build", "server"));
