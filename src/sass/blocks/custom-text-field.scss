@@ -1,0 +1,29 @@
+.custom-text-field {
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+    color: rgba(68, 68, 68, 0.5);
+    border: 2px solid #d7dcde;
+    border-radius: 3px;
+
+    font: inherit;
+
+    &:hover {
+      border-color: #b4b9bb;
+    }
+
+    &:invalid {
+      color: $color-red-dark;
+      border-color: $color-red-dark;
+    }
+
+    &:focus {
+      color: #444444;
+      border-color: $color-black;
+      outline: none;
+    }
+  }
+}
