@@ -1,0 +1,54 @@
+{
+  "name": "nerds-26",
+  "version": "2.0.0",
+  "description": "Личный проект Нёрдс от HTML Academy",
+  "author": "1maximsafronov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1maximsafronov/32787-nerds-26/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1maximsafronov/32787-nerds-26.git"
+  },
+  "scripts": {
+    "setup-gulp": "npm install --save-dev @htmlacademy/editorconfig-cli autoprefixer browser-sync del gh-pages gulp gulp-csso gulp-htmlmin gulp-imagemin gulp-plumber gulp-postcss gulp-posthtml gulp-rename gulp-sass gulp-sourcemaps gulp-svgstore gulp-uglify gulp-webp node-normalize-scss posthtml-include stylelint stylelint-config-htmlacademy"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "posthtml-include": "^1.4.3",
+    "node-normalize-scss": "^8.0.1",
+    "gh-pages": "^2.2.0",
+    "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.7",
+    "stylelint": "^13.3.3",
+    "stylelint-config-htmlacademy": "^0.1.4",
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/js/**/*.js",
+    "src/img/**/*.svg",
+    "src/sass/**/*.{sass,scss}"
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ]
+}
