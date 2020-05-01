@@ -2,20 +2,23 @@
   width: 760px;
 }
 
+.catalog__sort {
+  margin-bottom: 55px;
+  padding-top: 5px;
+}
+
 .catalog__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   margin: 0;
   margin-bottom: 27px;
   padding: 0;
 
   list-style: none;
-
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-.catalog__sort {
-  margin-bottom: 55px;
-  padding-top: 5px;
+.catalog__item {
+  margin-bottom: 33px;
 }

@@ -1,4 +1,5 @@
 .partners {
+  padding-top: 46px;
   padding-bottom: 28px;
 
   border-bottom: 2px solid $color-gray;
@@ -6,12 +7,11 @@
 
 .partners__list {
   display: flex;
+  justify-content: space-between;
 
   padding: 0;
 
   list-style: none;
-
-  justify-content: space-between;
 }
 
 .partners__item {
@@ -45,13 +45,12 @@
 
 .partners__link {
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 260px;
 
   opacity: 0.2;
-
-  justify-content: center;
-  align-items: center;
 
   &:hover {
     opacity: 1;

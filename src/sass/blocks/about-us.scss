@@ -1,12 +1,11 @@
 .about-us {
   display: flex;
+  justify-content: space-between;
 
-  margin-bottom: 46px;
+  padding-top: 40px;
   padding-bottom: 73px;
 
   border-bottom: 2px solid $color-gray;
-
-  justify-content: space-between;
 }
 
 .about-us__desc {

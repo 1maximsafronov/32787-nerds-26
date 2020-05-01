@@ -1,12 +1,14 @@
 .main-nav {
   display: flex;
-
-  text-transform: uppercase;
-
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 30px;
-
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.main-nav__site-nav {
+  margin-right: 45px;
+  margin-bottom: 8px;
+}
+
+.main-nav__user-nav {
+  margin-bottom: 4px;
 }

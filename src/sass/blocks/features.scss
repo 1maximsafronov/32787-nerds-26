@@ -1,6 +1,6 @@
 .features {
-  margin-bottom: 40px;
   padding-bottom: 80px;
+  padding-top: 80px;
 
   border-bottom: 2px solid $color-gray;
 }
@@ -47,5 +47,5 @@
 }
 
 .features__btn {
-  width: 160px;
+  min-width: 160px;
 }

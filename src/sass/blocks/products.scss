@@ -1,8 +1,7 @@
-.products__item {
+.product {
   position: relative;
 
   width: 360px;
-  margin-bottom: 33px;
   padding-top: 40px;
 
   border-top-left-radius: 5px;
@@ -31,23 +30,23 @@
     background-color: #4d4d4d;
     box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
 
-    .products__info {
+    .product__info {
       opacity: 1;
     }
   }
 }
 
-.products__picture {
+.product__picture {
   width: 360px;
   height: 576px;
   margin: 0;
 }
 
-.products__image {
+.product__image {
   display: block;
 }
 
-.products__info {
+.product__info {
   position: absolute;
   bottom: 0;
 
@@ -62,7 +61,7 @@
   background-color: $color-gray;
 }
 
-.products__title {
+.product__title {
   display: block;
 
   margin: 0;
@@ -87,7 +86,7 @@
   }
 }
 
-.products__desc {
+.product__desc {
   margin: 0;
   margin-bottom: 30px;
 
@@ -97,6 +96,6 @@
   line-height: 18px;
 }
 
-.products__buy {
+.product__buy {
   display: block;
 }

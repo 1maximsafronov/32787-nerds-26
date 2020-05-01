@@ -10,11 +10,15 @@
   width: 160px;
   height: 65px;
 
-  &:hover {
+  &[href]:hover {
     opacity: 0.8;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
+}
+
+.main-header__logo-image {
+  display: block;
 }

@@ -12,30 +12,27 @@
   padding-bottom: 47px;
   padding-left: 50px;
 
+  color: #666666;
   background-color: $color-white;
+
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .contacts__title {
   margin: 0;
   margin-bottom: 23px;
 
+  color: $color-black;
+
   font-size: 18px;
   line-height: 30px;
 }
 
-.contacts-text,
-.contacts__adress,
-.contacts__phone {
-  color: #666666;
-
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 18px;
-}
-
 .contacts__adress {
   margin-bottom: 18px;
+
+  font-style: normal;
 }
 
 .contacts__phone {
@@ -44,6 +41,8 @@
   margin-bottom: 37px;
 
   text-decoration: none;
+
+  color: #666666;
 }
 
 .contacts__write-us {

@@ -18,10 +18,14 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
+  color: $color-black;
+  background-color: $color-white;
 }
 
 @import "blocks/visually-hidden.scss";
 @import "blocks/btn.scss";
+@import "blocks/custom-radio-button.scss";
+@import "blocks/custom-checkbox.scss";
 @import "blocks/container.scss";
 @import "blocks/inner-page.scss";
 @import "blocks/main-header.scss";
