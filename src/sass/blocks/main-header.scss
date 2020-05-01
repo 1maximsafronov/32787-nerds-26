@@ -1,0 +1,20 @@
+.main-header {
+  padding-top: 49px;
+
+  background-color: #eeeeee;
+}
+
+.main-header__logo {
+  display: block;
+
+  width: 160px;
+  height: 65px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,33 @@
+.site-nav {
+  display: flex;
+
+  margin-right: 45px;
+}
+
+.site-nav__link {
+  margin-right: 45px;
+  margin-bottom: 4px;
+  padding-bottom: 3px;
+
+  text-decoration: none;
+
+  color: #000000;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    color: #fb565a;
+  }
+
+  &:active {
+    opacity: 0.3;
+    color: #000000;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--current {
+    border-bottom-color: #fb565a;
+  }
+}

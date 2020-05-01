@@ -1,0 +1,51 @@
+.contacts__map-image {
+  display: block;
+}
+
+.contacts__desc {
+  position: relative;
+  z-index: 3;
+
+  width: 319px;
+  padding-top: 49px;
+  padding-right: 50px;
+  padding-bottom: 47px;
+  padding-left: 50px;
+
+  background-color: #ffffff;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 23px;
+
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contacts-text,
+.contacts__adress,
+.contacts__phone {
+  color: #666666;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 18px;
+}
+
+.contacts__adress {
+  margin-bottom: 18px;
+}
+
+.contacts__phone {
+  display: block;
+
+  margin-bottom: 37px;
+
+  text-decoration: none;
+}
+
+.contacts__write-us {
+  display: block;
+}

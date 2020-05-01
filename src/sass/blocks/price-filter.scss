@@ -1,0 +1,48 @@
+.price-filter {
+  margin-bottom: 54px;
+}
+
+.price-filter__title {
+  margin-bottom: 48px;
+}
+
+.price-filter__range-controls {
+  position: relative;
+
+  margin-bottom: 14px;
+  padding: 39px 21px;
+
+  background-color: #eeeeee;
+}
+
+.price-filter__value-range {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  color: #283136;
+
+  font-size: 16px;
+  line-height: 22px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-filter__min {
+  margin-right: 14px;
+}
+
+.price-filter__min,
+.price-filter__max {
+  width: 80px;
+  padding: 8px;
+
+  text-align: center;
+
+  border: none;
+  background-color: #eeeeee;
+
+  font: inherit;
+}

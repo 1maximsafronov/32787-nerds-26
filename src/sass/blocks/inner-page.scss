@@ -1,0 +1,28 @@
+.inner-page {
+  margin: 0;
+}
+
+.inner-page__title {
+  margin: 0;
+  margin-bottom: 55px;
+  padding-top: 79px;
+  padding-bottom: 107px;
+
+  text-align: center;
+
+  background-color: #eeeeee;
+
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 55px;
+}
+
+.inner-page__container {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.inner-page__main-footer {
+  margin-top: 60px;
+}

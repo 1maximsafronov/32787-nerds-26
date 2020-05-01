@@ -12,7 +12,9 @@
     "url": "git+https://github.com/1maximsafronov/32787-nerds-26.git"
   },
   "scripts": {
-    "setup-gulp": "npm install --save-dev @htmlacademy/editorconfig-cli autoprefixer browser-sync del gh-pages gulp gulp-csso gulp-htmlmin gulp-imagemin gulp-plumber gulp-postcss gulp-posthtml gulp-rename gulp-sass gulp-sourcemaps gulp-svgstore gulp-uglify gulp-webp node-normalize-scss posthtml-include stylelint stylelint-config-htmlacademy"
+    "setup-gulp": "npm install --save-dev @htmlacademy/editorconfig-cli autoprefixer browser-sync del gh-pages gulp gulp-csso gulp-htmlmin gulp-imagemin gulp-plumber gulp-postcss gulp-posthtml gulp-rename gulp-sass gulp-sourcemaps gulp-svgstore gulp-uglify gulp-webp node-normalize-scss posthtml-include stylelint stylelint-config-htmlacademy",
+    "build": "gulp build",
+    "start": "gulp start"
   },
   "devDependencies": {
     "del": "^5.1.0",
@@ -36,7 +38,7 @@
     "browser-sync": "^2.26.7",
     "stylelint": "^13.3.3",
     "stylelint-config-htmlacademy": "^0.1.4",
-    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "@htmlacademy/editorconfig-cli": "^1.0.0"
   },
   "editorconfig-cli": [
     "*.json",

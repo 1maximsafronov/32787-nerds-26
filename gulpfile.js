@@ -8,7 +8,7 @@ const server = require("browser-sync").create();
 const uglify = require("gulp-uglify");
 const ghpages = require("gh-pages");
 const htmlmin = require("gulp-htmlmin");
-const plumber = require("gulp-plubmer");
+const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const include = require("posthtml-include");
 const imagemin = require("gulp-imagemin");
@@ -112,7 +112,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("src/*.html", gulp.series("html", "refresh"));
-  gulp.watch("src/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("src/img/icon-*.svg", gulp.series("html", "refresh"));
   gulp.watch("src/sass/**/*.{scss,sass}", gulp.series("css", "refresh"));
   gulp.watch("src/js/**/*.js}", gulp.series("jsmin"));
 });
@@ -124,7 +124,7 @@ gulp.task("refresh", function (done) {
 
 
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "jsmin"));
+gulp.task("build", gulp.series("clean", "copy", "css", "html", "jsmin"));
 gulp.task("start", gulp.series("build", "server"));
 
 gulp.task("publish",["build"], function () {
