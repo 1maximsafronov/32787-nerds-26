@@ -67,7 +67,7 @@ gulp.task("css", function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({
-      include: require("node-normalize-scss").includePaths
+      includePaths: require('node-normalize-scss').includePaths
     }))
     .pipe(postcss([
       autoprefixer()
@@ -127,6 +127,6 @@ gulp.task("refresh", function (done) {
 gulp.task("build", gulp.series("clean", "copy", "css", "html", "jsmin"));
 gulp.task("start", gulp.series("build", "server"));
 
-gulp.task("publish",["build"], function () {
-  return ghpages.publish(buildFolder, function(err) {});
-});
+// gulp.task("publish",["build"], function () {
+//   return ghpages.publish(buildFolder, function(err) {});
+// });
