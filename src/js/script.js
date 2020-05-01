@@ -1,6 +1,6 @@
-const writeUsBtn = document.querySelector('.contacts__write-us');
-const writeUsModal = document.querySelector('.modal-write-us');
-const modalClose = writeUsModal.querySelector('.modal__close');
+var writeUsBtn = document.querySelector('.contacts__write-us');
+var writeUsModal = document.querySelector('.modal-write-us');
+var modalClose = writeUsModal.querySelector('.modal__close');
 
 writeUsBtn.addEventListener('click', function(evt){
     evt.preventDefault();

@@ -1,19 +1,35 @@
 .site-nav {
+  padding: 0;
   display: flex;
+  list-style: none;
   text-transform: uppercase;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
 }
 
-.site-nav__link {
+.site-nav__item {
   margin-right: 45px;
   padding-bottom: 3px;
 
+  color: $color-black;
+  border-bottom: 2px solid transparent;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--current {
+    border-bottom-color: $color-red;
+  }
+}
+
+.site-nav__link {
   text-decoration: none;
 
   color: $color-black;
-  border-bottom: 2px solid transparent;
+
 
   &:hover {
     color: $color-red;
@@ -22,13 +38,5 @@
   &:active {
     opacity: 0.3;
     color: $color-black;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &--current {
-    border-bottom-color: $color-red;
   }
 }

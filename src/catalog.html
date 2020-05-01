@@ -13,18 +13,25 @@
       <a class="main-header__logo" href="index.html">
         <img class="main-header__logo-image" width="160" height="67" src="img/nerds-logo.svg" alt="Логотип Нёрдс">
       </a>
-      <div class="main-nav__site-nav site-nav">
-        <a class="site-nav__link" href="#">Студия</a>
-        <a class="site-nav__link" href="#">Клиенты</a>
-        <a class="site-nav__link  site-nav__link--current">Магазин</a>
-        <a class="site-nav__link" href="#">Контакты</a>
-      </div>
+      <ul class="main-nav__site-nav site-nav">
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="#">Студия</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="#">Клиенты</a>
+        </li>
+        <li class="site-nav__item site-nav__item--current">
+          Магазин
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="#">Контакты</a>
+        </li>
+      </ul>
       <div class="main-nav__user-nav user-nav">
         <a class="user-nav__link user-nav__link--cart" href="#">Корзина</a>
       </div>
     </nav>
   </header>
-
   <main>
     <h1 class="inner-page__title">Магазин готовых шаблонов</h1>
     <div class="inner-page__container container">
@@ -228,15 +235,28 @@
         </a>
       </div>
     </section>
-    <div class="main-footer__social social">
-      <div class="main-footer__social-list social__list">
-        <a class="social__link social__link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
-        <a class="social__link social__link--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
-        <a class="social__link social__link--inst" href="#"><span class="visually-hidden">Инстаграм</span></a>
-      </div>
-      <div >
-        <b class="social__slogan">Давайте дружить, это выгодно!</b><br>
-        <p class="social__text">Скидка 10% для друзей из социальных сетей.</p>
+    <div class="main-footer__bottom">
+      <ul class="main-footer__social-list social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="#">
+            <span class="visually-hidden">Инстаграм</span>
+          </a>
+        </li>
+      </ul>
+      <div class="main-footer__friendship friendship">
+        <p class="friendship__text">
+          <span class="friendship__slogan">Давайте дружить, это выгодно!</span><br>
+          Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </div>
   </footer>
@@ -244,16 +264,16 @@
     <h2 class="modal-write-us__title">Напишите нам</h2>
     <form class="modal-write-us__form" action="index.html" method="post">
       <div class="modal-write-us__wrapper">
-        <p class="modal-write-us__name">
+        <p class="modal-write-us__text-field custom-text-field">
           <label class="modal-write-us__label"  for="username">Ваше имя:</label>
           <input class="modal-write-us__input" type="text" name="username" id="username" placeholder="Имя Фамилия">
         </p>
-        <p class="modal-write-us__email">
+        <p class="modal-write-us__text-field custom-text-field">
           <label class="modal-write-us__label" for="useremail">Вашь e-mail:</label>
           <input class="modal-write-us__input" type="email" name="useremail" id="useremail" placeholder="email@example.com">
         </p>
       </div>
-      <p class="modal-write-us__textmessage">
+      <p class="modal-write-us__textmessage custom-text-field">
         <label class="modal-write-us__label" for="textmessage">Текст письма:</label>
         <textarea class="modal-write-us__input modal-write-us__input--textmessage" name="textmessage" id="textmessage" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </p>
