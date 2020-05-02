@@ -9,10 +9,11 @@
   position: absolute;
   top: 0;
 
+  display: none;
+
   padding-top: 78px;
   padding-bottom: 80px;
 
-  opacity: 0;
   background-repeat: no-repeat;
 
   &--one {
@@ -33,7 +34,7 @@
   &--show {
     position: relative;
 
-    opacity: 1;
+    display: block;
   }
 }
 

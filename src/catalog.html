@@ -37,7 +37,7 @@
     <div class="inner-page__container container">
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
-        <form class="filters__form" action="index.html" method="get">
+        <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
           <!-- Фильр по цене -->
           <fieldset class="filters__group price-filter">
             <legend class="filters__title price-filter__title">Стоимость:</legend>
@@ -65,15 +65,15 @@
             <legend class="filters__title">Сетка:</legend>
             <ul class="filters__list">
               <li class="filters__item custom-radio-button">
-                <input class="visually-hidden" id="adaptive-layout" type="radio" name="layout-radio" checked>
+                <input class="visually-hidden" id="adaptive-layout" type="radio" name="layout-radio" value="adaptive" checked>
                 <label for="adaptive-layout">Адаптивная</label>
               </li>
               <li class="filters__item custom-radio-button">
-                <input class="visually-hidden" id="fixed-layout" type="radio" name="layout-radio">
+                <input class="visually-hidden" id="fixed-layout" type="radio" name="layout-radio" value="fixed">
                 <label for="fixed-layout">Фиксированная</label>
               </li>
               <li class="filters__item custom-radio-button">
-                <input class="visually-hidden" id="flex-layout" type="radio" name="layout-radio">
+                <input class="visually-hidden" id="flex-layout" type="radio" name="layout-radio" value="flex">
                 <label for="flex-layout">Резиновая</label>
               </li>
             </ul>
@@ -83,23 +83,23 @@
             <legend class="filters__title">Особенности:</legend>
             <ul class="filters__list">
               <li class="filters__item custom-checkbox">
-                <input class="visually-hidden" id="block-slider" type="checkbox" name="specificity-checkbox" checked>
+                <input class="visually-hidden" id="block-slider" type="checkbox" name="block-slider" checked>
                 <label for="block-slider">Слайдер</label>
               </li>
               <li class="filters__item custom-checkbox">
-                <input class="visually-hidden" id="block-features" type="checkbox" name="specificity-checkbox">
+                <input class="visually-hidden" id="block-features" type="checkbox" name="block-features">
                 <label for="block-features">Блок приемуществ</label>
               </li>
               <li class="filters__item custom-checkbox">
-                <input class="visually-hidden" id="block-news" type="checkbox" name="specificity-checkbox" checked>
+                <input class="visually-hidden" id="block-news" type="checkbox" name="block-news" checked>
                 <label for="block-news">Новости</label>
               </li>
               <li class="filters__item custom-checkbox">
-                <input class="visually-hidden" id="block-gallery" type="checkbox" name="specificity-checkbox">
+                <input class="visually-hidden" id="block-gallery" type="checkbox" name="block-gallery">
                 <label for="block-gallery">Галерея</label>
               </li>
               <li class="filters__item custom-checkbox">
-                <input class="visually-hidden" id="block-cart" type="checkbox" name="specificity-checkbox">
+                <input class="visually-hidden" id="block-cart" type="checkbox" name="block-cart">
                 <label for="block-cart">Корзина</label>
               </li>
             </ul>
@@ -126,98 +126,7 @@
           </div>
         </div>
         <!-- Список товаров -->
-        <ul class="catalog__list">
-          <li class="catalog__item product">
-            <p class="product__picture">
-              <picture>
-                <source type="image/webp" srcset="img/img-sedona.webp">
-                <img class="product__image" width="360" height="576" src="img/img-sedona.jpg" alt="Sedona - Информационный сайт для туристов">
-              </picture>
-            </p>
-            <div class="product__info">
-              <a class="product__title" href="#">Sedona</a>
-              <p class="product__desc">
-                Информационный сайт для туристов
-              </p>
-              <a class="product__buy btn btn--red" href="#">9 900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item product">
-            <p class="product__picture">
-              <picture>
-                <source type="image/webp" srcset="img/img-pink.webp">
-                <img class="product__image" width="360" height="576" src="img/img-pink.jpg" alt="Pink App - Продуктовый лендинг приложения для iOS и Android">
-              </picture>
-            </p>
-            <div class="product__info">
-              <a class="product__title" href="#">Pink App</a>
-              <p class="product__desc">
-                Продуктовый лендинг приложения для iOS и Android
-              </p>
-              <a class="product__buy btn  btn--red" href="#">9 900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item product">
-            <p class="product__picture">
-              <picture>
-                <source type="image/webp" srcset="img/img-barbershop.webp">
-                <img class="product__image" width="360" height="576" src="img/img-barbershop.jpg" alt="Barbershop - Сайт салона красоты. Для мужчин, да.">
-              </picture>
-            </p>
-            <div class="product__info">
-              <a class="product__title" href="#">Barbershop</a>
-              <p class="product__desc">
-                Сайт салона красоты. Для мужчин, да.
-              </p>
-              <a class="product__buy btn  btn--red" href="#">9 900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item product">
-            <p class="product__picture">
-              <picture>
-                <source type="image/webp" srcset="img/img-mishka.webp">
-                <img class="product__image" width="360" height="576" src="img/img-mishka.jpg" alt="Mishka - Информационный сайт для туристов">
-              </picture>
-            </p>
-            <div class="product__info">
-              <a class="product__title" href="#">Mishka</a>
-              <p class="product__desc">
-                Интернет-магазин вязаных игрушек
-              </p>
-              <a class="product__buy btn  btn--red" href="#">9 900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item product">
-            <p class="product__picture">
-              <picture>
-                <source type="image/webp" srcset="img/img-aplus.webp">
-                <img class="product__image" width="360" height="576" src="img/img-aplus.jpg" alt="A Plus - Лендинг курсов повышения квалификации">
-              </picture>
-            </p>
-            <div class="product__info">
-              <a class="product__title" href="#">A Plus</a>
-              <p class="product__desc">
-                Лендинг курсов повышения квалификации
-              </p>
-              <a class="product__buy btn  btn--red" href="#">9 900 руб.</a>
-            </div>
-          </li>
-          <li class="catalog__item product">
-            <p class="product__picture">
-              <picture>
-                <source type="image/webp" srcset="img/img-kvast.webp">
-                <img class="product__image" width="360" height="576" src="img/img-kvast.jpg" alt="Кваст - Промо-сайт производителя крафтового кваса">
-              </picture>
-            </p>
-            <div class="product__info">
-              <h3 class="product__title">Кваст</h3>
-              <p class="product__desc">
-                Промо-сайт производителя крафтового кваса
-              </p>
-              <a class="product__buy btn  btn--red" href="#">9 900 руб.</a>
-            </div>
-          </li>
-        </ul>
+        <ul class="catalog__list"></ul>
         <!-- Постраничная навигация -->
         <ul class="catalog__pagination pagination">
           <li class="pagination__item ">
@@ -306,7 +215,22 @@
     </form>
     <button class="modal__close" type="button" name="closemodal"><span class="visually-hidden">Закрыть</span></button>
   </section>
-  <script src="js/script.min.js"></script>
+  <template id="product">
+    <li class="catalog__item product">
+      <p class="product__picture">
+        <img class="product__image" width="360" height="576" src="" alt="">
+      </p>
+      <div class="product__info">
+        <a class="product__title" href="#"></a>
+        <p class="product__desc"></p>
+        <a class="product__buy btn  btn--red" href="#"></a>
+      </div>
+    </li>
+  </template>
+  <script src="js/backend.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

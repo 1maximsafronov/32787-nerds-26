@@ -1,6 +1,7 @@
-var writeUsBtn = document.querySelector('.contacts__write-us');
-var writeUsModal = document.querySelector('.modal-write-us');
-var modalClose = writeUsModal.querySelector('.modal__close');
+const writeUsBtn = document.querySelector('.contacts__write-us');
+const writeUsModal = document.querySelector('.modal-write-us');
+const modalClose = writeUsModal.querySelector('.modal__close');
+const catalogtList = document.querySelector('.catalog__list');
 
 writeUsBtn.addEventListener('click', function(evt){
     evt.preventDefault();
@@ -17,3 +18,7 @@ document.addEventListener('keydown', function(evt){
     writeUsModal.classList.remove('modal--show');
   }
 });
+
+if (catalogtList) {
+  window.data.load();
+}
