@@ -44,9 +44,10 @@
             <div class="price-filter__range-controls range-controls">
                <div class="range-controls__scale">
                  <div class="range-controls__bar"></div>
+                 <div class="range-controls__toggle range-controls__toggle--min"></div>
+                 <div class="range-controls__toggle range-controls__toggle--max"></div>
                </div>
-               <div class="range-controls__toggle range-controls__toggle--min"></div>
-               <div class="range-controls__toggle range-controls__toggle--max"></div>
+
              </div>
              <p class="price-filter__value-range">
                <label class="price-filter__min-value" for="filter-min-price">
@@ -78,7 +79,7 @@
             </ul>
           </fieldset>
           <!-- Фильтр по особенностям -->
-          <fieldset class="filters__group">
+          <fieldset class="filters__group filters__group--features">
             <legend class="filters__title">Особенности:</legend>
             <ul class="filters__list">
               <li class="filters__item custom-checkbox">
@@ -226,7 +227,7 @@
       </div>
     </li>
   </template>
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

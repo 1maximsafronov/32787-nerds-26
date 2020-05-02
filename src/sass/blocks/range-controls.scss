@@ -1,11 +1,13 @@
 .range-controls__scale {
   height: 2px;
-
+  position: relative;
   background-color: #d7dcde;
 }
 
 .range-controls__bar {
-  width: 70%;
+  position: absolute;
+  left: 0;
+  right: 0;
   height: 2px;
 
   background-color: #00ca74;
@@ -13,6 +15,7 @@
 
 .range-controls__toggle {
   position: absolute;
+  left: -10px;
   top: 50%;
 
   width: 20px;

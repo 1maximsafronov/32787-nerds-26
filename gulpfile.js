@@ -16,7 +16,7 @@ const posthtml = require("gulp-posthtml");
 const svgstore = require("gulp-svgstore");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("autoprefixer");
-
+const terser = require('gulp-terser');
 const rollup = require("gulp-better-rollup");
 const babel = require("rollup-plugin-babel");
 
@@ -87,17 +87,12 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("jsmin", function () {
-  return gulp.src("src/js/script.js")
-    .pipe(uglify())
-    .pipe(rename("script.min.js"))
-    .pipe(gulp.dest(buildFolder + "/js"));
-});
-
 gulp.task("js", function () {
     return gulp.src("src/js/main.js")
     .pipe(sourcemaps.init())
     .pipe(rollup({plugins: [babel()]}, 'iife'))
+    // .pipe(terser())
+    .pipe(rename("main.min.js"))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(buildFolder + "/js"))
 });
@@ -130,7 +125,8 @@ gulp.task("server", function () {
   gulp.watch("src/*.html", gulp.series("html", "refresh"));
   gulp.watch("src/img/icon-*.svg", gulp.series("html", "refresh"));
   gulp.watch("src/sass/**/*.{scss,sass}", gulp.series("css", "refresh"));
-  // gulp.watch("src/js/**/*.js}", gulp.series("jsmin"));
+  gulp.watch("src/js/modules/*.js}", gulp.series("js", "refresh"));
+  gulp.watch("src/js/*.js", gulp.series("js", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
