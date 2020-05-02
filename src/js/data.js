@@ -1,4 +1,5 @@
-(function () {
+import {load as backendload, upload as backenduload} from './backend.js';
+import {renderProducts} from './product.js';
 
   let productsArr = [];
 
@@ -7,7 +8,7 @@
       productsArr[index] = item;
     });
 
-    window.product.renderProducts(productsArr);
+    renderProducts(productsArr);
   }
 
   function onError(errorMessage) {
@@ -24,15 +25,11 @@
   }
 
   function load() {
-    window.backend.load(onSuccess, onError);
+    backendload(onSuccess, onError);
   }
 
   function getProducts() {
     return productsArr;
   }
 
-  window.data = {
-    load: load,
-    getAdverts: getProducts
-  };
-})();
+export {load, getProducts};

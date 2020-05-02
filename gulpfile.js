@@ -17,6 +17,9 @@ const svgstore = require("gulp-svgstore");
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("autoprefixer");
 
+const rollup = require("gulp-better-rollup");
+const babel = require("rollup-plugin-babel");
+
 const buildFolder = "build";
 
 
@@ -91,11 +94,19 @@ gulp.task("jsmin", function () {
     .pipe(gulp.dest(buildFolder + "/js"));
 });
 
+gulp.task("js", function () {
+    return gulp.src("src/js/main.js")
+    .pipe(sourcemaps.init())
+    .pipe(rollup({plugins: [babel()]}, 'iife'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(buildFolder + "/js"))
+});
+
 gulp.task("copy", function () {
   return gulp.src([
     "src/fonts/**/*.{woff,woff2}",
     "src/img/**",
-    "src/js/**",
+    "src/js/**/*.json",
     "src/*.ico"
   ], {
     base: "src"
@@ -130,5 +141,5 @@ gulp.task("refresh", function (done) {
 
 
 
-gulp.task("build", gulp.series("clean", "html", "css", "copy"));
+gulp.task("build", gulp.series("clean", "copy", "css", "html", "js"));
 gulp.task("start", gulp.series("build", "server"));

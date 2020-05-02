@@ -1,4 +1,3 @@
-(function () {
   const URL_LOAD = 'js/products.json';
   const URL_UPLOAD = '';
   const STATUS_CODE_OK = 200;
@@ -50,8 +49,4 @@
     xhr.send(data);
   }
 
-  window.backend = {
-    load: load,
-    upload: upload
-  };
-})();
+export {load, upload};

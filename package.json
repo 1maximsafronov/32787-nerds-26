@@ -12,6 +12,8 @@
     "url": "git+https://github.com/1maximsafronov/32787-nerds-26.git"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^9.7.6",
     "browser-sync": "^2.26.7",
@@ -19,6 +21,8 @@
     "editorconfig": "^0.15.3",
     "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-better-rollup": "^4.0.1",
     "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
@@ -33,6 +37,8 @@
     "gulp-webp": "^4.0.1",
     "node-normalize-scss": "^8.0.1",
     "posthtml-include": "^1.4.3",
+    "rollup": "^2.7.6",
+    "rollup-plugin-babel": "^4.4.0",
     "stylelint": "^13.3.3",
     "stylelint-config-htmlacademy": "^0.1.4"
   },
@@ -40,7 +46,8 @@
     "setup-gulp": "npm install --save-dev @htmlacademy/editorconfig-cli autoprefixer browser-sync del gh-pages gulp gulp-csso gulp-htmlmin gulp-imagemin gulp-plumber gulp-postcss gulp-posthtml gulp-rename gulp-sass gulp-sourcemaps gulp-svgstore gulp-uglify gulp-webp node-normalize-scss posthtml-include stylelint stylelint-config-htmlacademy",
     "build": "gulp build",
     "start": "gulp start",
-    "test": "npm run editorconfig && npm run stylelint"
+    "test": "editorconfig-cli",
+    "js": "gulp js"
   },
   "browserslist": [
     "last 2 versions",
