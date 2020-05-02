@@ -1,7 +1,7 @@
 .range-controls__scale {
   height: 2px;
   position: relative;
-  background-color: #d7dcde;
+  background-color: $color-gray-dark;
 }
 
 .range-controls__bar {
@@ -10,7 +10,7 @@
   right: 0;
   height: 2px;
 
-  background-color: #00ca74;
+  background-color: $color-green;
 }
 
 .range-controls__toggle {
@@ -27,7 +27,7 @@
   border: 8px solid $color-white;
   border-radius: 50%;
   background-color: #ababab;
-  box-shadow: 0 2px 0 0 #dadada;
+  box-shadow: 0 2px 0 0 $color-gray-darker;
 
   &--max {
     left: 161px;

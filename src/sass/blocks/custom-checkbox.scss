@@ -26,6 +26,13 @@
     &:hover::before {
       opacity: 1;
     }
+
+    &:disabled,
+    &--disabled {
+      &::before {
+        opacity: 0.1;
+      }
+    }
   }
 
   input:checked + label {

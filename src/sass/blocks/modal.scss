@@ -8,7 +8,7 @@
 
   transform: translate(-50%, -50%);
 
-  box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+  box-shadow: 0 20px 40px rgba($color-black, 0.75);
 
   &--show {
     display: block;

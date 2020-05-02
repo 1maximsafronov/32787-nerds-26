@@ -6,7 +6,7 @@
 
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  background-color: rgba(77, 77, 77, 0.12);
+  background-color: rgba(#4d4d4d, 0.12);
 
   &::before {
     position: absolute;
@@ -28,7 +28,7 @@
 
   &:hover {
     background-color: #4d4d4d;
-    box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
+    box-shadow: 0 6px 15px rgba($color-black, 0.25);
 
     .product__info {
       opacity: 1;
@@ -78,7 +78,7 @@
   line-height: 30px;
 
   &:hover {
-    color: #fb565a;
+    color: $color-red;
   }
 
   &:active {

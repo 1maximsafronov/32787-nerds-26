@@ -41,12 +41,22 @@
       background-color: #4d4d4d;
     }
 
-    &:hover::before {
-      opacity: 1;
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      &::after {
+        opacity: 1;
+      }
     }
 
-    &:hover::after {
-      opacity: 1;
+    &:disabled,
+    &--disabled {
+      &::before,
+      &::after {
+        opacity: 0.1;
+      }
     }
   }
 
