@@ -1,7 +1,7 @@
 const productTemplate = document.querySelector('#product');
 const catalogtList = document.querySelector('.catalog__list');
 
-function createProduct(product) {
+function createElement(product) {
   let productElement = productTemplate.content.querySelector('.product').cloneNode(true);
 
   let productTitle = productElement.querySelector('.product__title');
@@ -18,27 +18,25 @@ function createProduct(product) {
   return productElement;
 }
 
-function renderProducts(products) {
-  if (catalogtList) {
+function render(products) {
     removeProducts();
     let productsFragment = document.createDocumentFragment();
 
     products.forEach(function (product) {
-      let productElement = createProduct(product);
-      productsFragment.appendChild(productElement);
+      productsFragment.appendChild(createElement(product));
     });
 
     catalogtList.appendChild(productsFragment);
-    }
+}
 
-    function removeProducts() {
-      let products = catalogtList.querySelectorAll('.product');
+function removeProducts() {
+  let products = catalogtList.querySelectorAll('.product');
 
-      products.forEach(function (product) {
-          product.remove();
-      });
-    }
-  }
+  products.forEach(function (product) {
+    product.remove();
+  });
+}
 
-
-export {renderProducts};
+export const product = {
+  render:render,
+}

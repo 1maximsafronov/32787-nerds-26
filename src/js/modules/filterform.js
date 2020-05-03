@@ -1,11 +1,39 @@
-import {getProducts} from './data.js';
-import {renderProducts} from './product.js';
-
+import {data} from './data.js';
+import {product} from "./product.js"
 
 const filterform = document.querySelector('.filters__form');
+const minPrice = document.querySelector('.price-filter__min');
+const maxPrice = document.querySelector('.price-filter__max');
 
-export function filterProducts() {
-  let products = getProducts();
+// let priceFilter = {
+//   min: {
+//     get: function () {
+//       return minPrice.value;
+//     },
+//     set: function (value) {
+//       minPrice.value = Math.floor(value);
+//     }
+//   },
+//   max: {
+//     get: function () {
+//       return maxPrice.value;
+//     },
+//     set: function (value) {
+//       maxPrice.value = Math.floor(value);
+//     }
+//   }
+// }
+
+function setMinPrice(value) {
+  minPrice.value = Math.floor(value);
+}
+
+function setMaxPrice(value) {
+  maxPrice.value = Math.floor(value);
+}
+
+function filterProducts() {
+  let products = data.getProducts();
 
   const priceFilter = {
     min: document.querySelector('.price-filter__min').value,
@@ -23,5 +51,11 @@ export function filterProducts() {
     return false;
   });
 
-  renderProducts(filteredProducts);
+  product.render(filteredProducts);
 }
+
+export const filterForm = {
+  filterProducts: filterProducts,
+  setMaxPrice: setMaxPrice,
+  setMinPrice: setMinPrice
+};

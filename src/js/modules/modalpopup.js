@@ -1,14 +1,18 @@
-export function setModalPopup(modal, btnModal) {
+function set(modal, btnOpenModal) {
   const modalClose = modal.querySelector('.modal__close');
 
-  btnModal.addEventListener('click', function(evt){
-      evt.preventDefault();
-      modal.classList.add('modal--show');
-      document.addEventListener('keydown', onModalEscPress);
-      modalClose.addEventListener('click', onModalCloseClick);
+  btnOpenModal.addEventListener('click', function(evt){
+    evt.preventDefault();
+    openModal();
   });
 
-  function closeOpenedModal() {
+  function openModal() {
+    modal.classList.add('modal--show');
+    document.addEventListener('keydown', onModalEscPress);
+    modalClose.addEventListener('click', onModalCloseClick);
+  }
+
+  function closeModal() {
     modal.classList.remove('modal--show');
     modalClose.removeEventListener('click', onModalCloseClick);
     document.removeEventListener('keydown', onModalEscPress);
@@ -16,14 +20,17 @@ export function setModalPopup(modal, btnModal) {
 
   function onModalCloseClick(evt) {
     evt.preventDefault();
-    closeOpenedModal();
+    closeModal();
   }
 
   function onModalEscPress(evt) {
     if (evt.key === 'Escape') {
       evt.preventDefault();
-      closeOpenedModal();
+      closeModal();
     }
   }
-
 }
+
+export const modalPopup = {
+  set: set
+};

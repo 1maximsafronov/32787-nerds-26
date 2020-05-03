@@ -1,35 +1,38 @@
-import {load as backendload, upload as backenduload} from './backend.js';
-import {renderProducts} from './product.js';
+import {backend} from './backend.js';
+import {product} from './product.js'
+let products = [];
 
-  let productsArr = [];
+function onSuccess(data) {
+  data.forEach(function (item, index) {
+    products[index] = item;
+  });
+  product.render(products);
+}
 
-  function onSuccess(data) {
-    data.forEach(function (item, index) {
-      productsArr[index] = item;
-    });
+function onError(errorMessage) {
+  let node = document.createElement('div');
+  node.classList.add('error-data-load');
+  node.textContent = errorMessage + ' Мы сгенерировали случайные объявления';
+  node.backgroundColor = 'red';
+  node.color = 'white';
+  document.body.appendChild(node);
 
-    renderProducts(productsArr);
+  function hideError() {
+    node.remove();
   }
 
-  function onError(errorMessage) {
-    let node = document.createElement('div');
-    node.classList.add('error-data-load');
-    node.textContent = errorMessage + ' Мы сгенерировали случайные объявления';
-    document.body.appendChild(node);
+  setTimeout(hideError, 5000);
+}
 
-    function hideError() {
-      node.remove();
-    }
+function load() {
+  backend.load(onSuccess, onError);
+}
 
-    setTimeout(hideError, 5000);
-  }
+function getProducts() {
+  return products;
+}
 
-  function load() {
-    backendload(onSuccess, onError);
-  }
-
-  function getProducts() {
-    return productsArr;
-  }
-
-export {load, getProducts};
+export const data = {
+  load: load,
+  getProducts: getProducts
+}
