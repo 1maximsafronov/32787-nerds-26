@@ -3,8 +3,13 @@
   const sliderItems = slider.querySelectorAll(`.slider__item`);
   const sliderToggles = slider.querySelectorAll(`.slider__toggle`);
 
-  function setOnTogglerClick(toggler, slide) {
+  if (slider) {
+    for (let i = 0; i < sliderToggles.length; i++) {
+      setOnTogglerClick(sliderToggles[i], sliderItems[i]);
+    }
+  }
 
+  function setOnTogglerClick(toggler, slide) {
     toggler.addEventListener(`click`, onToggleClick);
 
     function onToggleClick(evt) {
@@ -15,10 +20,5 @@
       toggler.classList.add(`slider__toggle--active`);
       slide.classList.add(`slider__item--show`);
     }
-  }
-
-  for (let i = 0; i < sliderToggles.length; i++) {
-    setOnTogglerClick(sliderToggles[i], sliderItems[i]);
-
   }
 })();
