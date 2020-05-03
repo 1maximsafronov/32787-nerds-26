@@ -48,7 +48,8 @@
     "build": "gulp build",
     "start": "gulp start",
     "test": "editorconfig-cli",
-    "js": "gulp js"
+    "js": "gulp js",
+    "publish": "gulp publish"
   },
   "browserslist": [
     "last 2 versions",
