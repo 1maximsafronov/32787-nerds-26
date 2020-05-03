@@ -1,0 +1,43 @@
+.custom-checkbox {
+  label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+
+    &::before {
+      position: absolute;
+      top: 11px;
+      left: 1px;
+
+      display: block;
+
+      width: 27px;
+      height: 23px;
+
+      content: "";
+      transform: translateY(-50%);
+
+      opacity: 0.4;
+      background-image: url("../img/checkbox-off.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:disabled,
+    &--disabled {
+      &::before {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  input:checked + label {
+    &::before {
+      background-image: url("../img/checkbox-on.svg");
+    }
+  }
+}

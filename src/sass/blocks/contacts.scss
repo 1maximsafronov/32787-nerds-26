@@ -1,0 +1,50 @@
+.contacts__map-image {
+  display: block;
+}
+
+.contacts__desc {
+  position: relative;
+  z-index: 3;
+
+  width: 319px;
+  padding-top: 49px;
+  padding-right: 50px;
+  padding-bottom: 47px;
+  padding-left: 50px;
+
+  color: #666666;
+  background-color: $color-white;
+
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 23px;
+
+  color: $color-black;
+
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contacts__adress {
+  margin-bottom: 18px;
+
+  font-style: normal;
+}
+
+.contacts__phone {
+  display: block;
+
+  margin-bottom: 37px;
+
+  text-decoration: none;
+
+  color: #666666;
+}
+
+.contacts__write-us {
+  display: block;
+}

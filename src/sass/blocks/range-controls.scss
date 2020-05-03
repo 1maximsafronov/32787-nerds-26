@@ -1,0 +1,35 @@
+.range-controls__scale {
+  height: 2px;
+  position: relative;
+  background-color: $color-gray-dark;
+}
+
+.range-controls__bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+
+  background-color: $color-green;
+}
+
+.range-controls__toggle {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+
+  width: 20px;
+  height: 20px;
+
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  border: 8px solid $color-white;
+  border-radius: 50%;
+  background-color: #ababab;
+  box-shadow: 0 2px 0 0 $color-gray-darker;
+
+  &--max {
+    left: 161px;
+  }
+}

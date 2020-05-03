@@ -1,0 +1,15 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main-nav__site-nav {
+  margin: 0;
+  margin-right: 45px;
+  margin-bottom: 8px;
+}
+
+.main-nav__user-nav {
+  margin-bottom: 4px;
+}

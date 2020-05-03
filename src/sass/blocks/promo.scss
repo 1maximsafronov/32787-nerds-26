@@ -1,0 +1,15 @@
+.promo {
+  background-color: $color-gray;
+}
+
+.promo__slider {
+  position: relative;
+}
+
+.promo__toggles {
+  position: absolute;
+  bottom: 96px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}

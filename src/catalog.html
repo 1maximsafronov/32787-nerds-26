@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Нёрдс</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="inner-page">
+  <header class="main-header">
+    <nav class="main-nav container">
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" width="160" height="67" src="img/nerds-logo.svg" alt="Логотип Нёрдс">
+      </a>
+      <ul class="main-nav__site-nav site-nav">
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="#">Студия</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="#">Клиенты</a>
+        </li>
+        <li class="site-nav__item site-nav__item--current">
+          Магазин
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="#">Контакты</a>
+        </li>
+      </ul>
+      <div class="main-nav__user-nav user-nav">
+        <a class="user-nav__link user-nav__link--cart" href="#">Корзина</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1 class="inner-page__title">Магазин готовых шаблонов</h1>
+    <div class="inner-page__container container">
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтры</h2>
+        <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
+          <!-- Фильр по цене -->
+          <fieldset class="filters__group price-filter">
+            <legend class="filters__title price-filter__title">Стоимость:</legend>
+            <div class="price-filter__range-controls range-controls">
+               <div class="range-controls__scale">
+                 <div class="range-controls__bar"></div>
+                 <div class="range-controls__toggle range-controls__toggle--min"></div>
+                 <div class="range-controls__toggle range-controls__toggle--max"></div>
+               </div>
+
+             </div>
+             <p class="price-filter__value-range">
+               <label class="price-filter__min-value" for="filter-min-price">
+                 <span class="visually-hidden">Минимальная цена</span> От
+               </label>
+               <input class="price-filter__min" id="filter-min-price" type="text" name="min-price" value="0">
+               <label class="price-filter__max-value" for="filter-max-price">
+                 <span class="visually-hidden">Максимальная цена</span>До
+               </label>
+               <input class="price-filter__max" id="filter-max-price" type="text" name="max-price" value="30000">
+             </p>
+          </fieldset>
+          <!-- Фильтр по типу сетки -->
+          <fieldset class="filters__group">
+            <legend class="filters__title">Сетка:</legend>
+            <ul class="filters__list">
+              <li class="filters__item custom-radio-button">
+                <input class="visually-hidden" id="any-layout" type="radio" name="layout-radio" value="any" checked>
+                <label for="any-layout">Любая</label>
+              </li>
+              <li class="filters__item custom-radio-button">
+                <input class="visually-hidden" id="adaptive-layout" type="radio" name="layout-radio" value="adaptive">
+                <label for="adaptive-layout">Адаптивная</label>
+              </li>
+              <li class="filters__item custom-radio-button">
+                <input class="visually-hidden" id="fixed-layout" type="radio" name="layout-radio" value="fixed">
+                <label for="fixed-layout">Фиксированная</label>
+              </li>
+              <li class="filters__item custom-radio-button">
+                <input class="visually-hidden" id="flex-layout" type="radio" name="layout-radio" value="flex">
+                <label for="flex-layout">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <!-- Фильтр по особенностям -->
+          <fieldset class="filters__group filters__group--features">
+            <legend class="filters__title">Особенности:</legend>
+            <ul class="filters__list">
+              <li class="filters__item custom-checkbox">
+                <input class="visually-hidden" id="block-slider" type="checkbox" name="block-slider" checked>
+                <label for="block-slider">Слайдер</label>
+              </li>
+              <li class="filters__item custom-checkbox">
+                <input class="visually-hidden" id="block-features" type="checkbox" name="block-features">
+                <label for="block-features">Блок приемуществ</label>
+              </li>
+              <li class="filters__item custom-checkbox">
+                <input class="visually-hidden" id="block-news" type="checkbox" name="block-news" checked>
+                <label for="block-news">Новости</label>
+              </li>
+              <li class="filters__item custom-checkbox">
+                <input class="visually-hidden" id="block-gallery" type="checkbox" name="block-gallery">
+                <label for="block-gallery">Галерея</label>
+              </li>
+              <li class="filters__item custom-checkbox">
+                <input class="visually-hidden" id="block-cart" type="checkbox" name="block-cart">
+                <label for="block-cart">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="filters__btn btn btn--gray" type="submit">Показать</button>
+        </form>
+      </section>
+      <!-- Каталог товаров -->
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог шаблонов</h2>
+        <!-- меню сортировки -->
+        <div class="catalog__sort sorting">
+          <p class="sorting__title">Сортировать:</p>
+          <div class="sorting__nav">
+            <a class="sorting__item sorting__item--by-price" href="#">По цене</a>
+            <a class="sorting__item sorting__item--by-type" href="#">По типу</a>
+            <a class="sorting__item sorting__item--by-name"  href="#">По названию</a>
+            <a class="sorting__toggle sorting__toggle--down" href="#">
+              <span class="visually-hidden">По возрастанию</span>
+            </a>
+            <a class="sorting__toggle sorting__toggle--up" href="#">
+              <span class="visually-hidden">По убыванию</span>
+            </a>
+          </div>
+        </div>
+        <!-- Список товаров -->
+        <ul class="catalog__list"></ul>
+        <!-- Постраничная навигация -->
+        <ul class="catalog__pagination pagination">
+          <li class="pagination__item ">
+            <a class="pagination__link btn btn--gray pagination__link--current" href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link btn btn--gray" href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link btn btn--gray" href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link btn btn--gray pagination__link--next" href="#">Следующая</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="inner-page__main-footer main-footer container">
+    <section class="main-footer__contacts contacts">
+      <h2 class="visually-hidden">Как нас найти</h2>
+      <p class="main-footer__map contacts__map">
+        <picture>
+          <source type="image/webp" srcset="img/map-with-marker.webp">
+          <img class="contacts__map-image" width="1440" height="416" src="img/map-with-marker.png" alt="Карта как проехать">
+        </picture>
+      </p>
+      <!-- <iframe class="main-footer__map-frame contacts__map-frame" width="1400" height="416" style="border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3042009455503!2d30.322961569200913!3d59.938639914249094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1570762971442!5m2!1sru!2sru"></iframe> -->
+      <div class="contacts__desc">
+        <h3 class="contacts__title">
+          NЁRDS DESIGN STUDIO
+        </h3>
+        <address class="contacts__adress">
+          191186, Санкт-Петербург,<br>
+          ул. Б. Конюшенная, д. 19/8<br>
+        </address>
+        <a class="contacts__phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+        <a class="contacts__write-us btn btn--red" href="#">
+          Напишите нам
+        </a>
+      </div>
+    </section>
+    <div class="main-footer__bottom">
+      <ul class="main-footer__social-list social">
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#">
+            <span class="visually-hidden">Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--inst" href="#">
+            <span class="visually-hidden">Инстаграм</span>
+          </a>
+        </li>
+      </ul>
+      <div class="main-footer__friendship friendship">
+        <p class="friendship__text">
+          <span class="friendship__slogan">Давайте дружить, это выгодно!</span><br>
+          Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </div>
+  </footer>
+  <section class="modal modal-write-us">
+    <h2 class="modal-write-us__title">Напишите нам</h2>
+    <form class="modal-write-us__form" action="index.html" method="post">
+      <div class="modal-write-us__wrapper">
+        <p class="modal-write-us__text-field custom-text-field">
+          <label class="modal-write-us__label"  for="username">Ваше имя:</label>
+          <input class="modal-write-us__input" type="text" name="username" id="username" placeholder="Имя Фамилия">
+        </p>
+        <p class="modal-write-us__text-field custom-text-field">
+          <label class="modal-write-us__label" for="useremail">Вашь e-mail:</label>
+          <input class="modal-write-us__input" type="email" name="useremail" id="useremail" placeholder="email@example.com">
+        </p>
+      </div>
+      <p class="modal-write-us__textmessage custom-text-field">
+        <label class="modal-write-us__label" for="textmessage">Текст письма:</label>
+        <textarea class="modal-write-us__input modal-write-us__input--textmessage" name="textmessage" id="textmessage" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="modal-write-us__btn btn btn--red" type="submit" name="sendmessage">Отправить</button>
+    </form>
+    <button class="modal__close" type="button" name="closemodal"><span class="visually-hidden">Закрыть</span></button>
+  </section>
+  <template id="product">
+    <li class="catalog__item product">
+      <p class="product__picture">
+        <img class="product__image" width="360" height="576" src="" alt="">
+      </p>
+      <div class="product__info">
+        <a class="product__title" href="#"></a>
+        <p class="product__desc"></p>
+        <a class="product__buy btn  btn--red" href="#"></a>
+      </div>
+    </li>
+  </template>
+  <script src="js/backend.js"></script>
+  <script src="js/product.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/modalpopup.js"></script>
+  <script src="js/filterform.js"></script>
+  <script src="js/sortmenu.js"></script>
+  <script src="js/rangeControls.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
