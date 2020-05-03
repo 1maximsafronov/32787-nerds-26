@@ -65,7 +65,11 @@
             <legend class="filters__title">Сетка:</legend>
             <ul class="filters__list">
               <li class="filters__item custom-radio-button">
-                <input class="visually-hidden" id="adaptive-layout" type="radio" name="layout-radio" value="adaptive" checked>
+                <input class="visually-hidden" id="any-layout" type="radio" name="layout-radio" value="any" checked>
+                <label for="any-layout">Любая</label>
+              </li>
+              <li class="filters__item custom-radio-button">
+                <input class="visually-hidden" id="adaptive-layout" type="radio" name="layout-radio" value="adaptive">
                 <label for="adaptive-layout">Адаптивная</label>
               </li>
               <li class="filters__item custom-radio-button">
@@ -114,7 +118,7 @@
         <div class="catalog__sort sorting">
           <p class="sorting__title">Сортировать:</p>
           <div class="sorting__nav">
-            <a class="sorting__item sorting__item--by-price sorting__item--active" href="#">По цене</a>
+            <a class="sorting__item sorting__item--by-price" href="#">По цене</a>
             <a class="sorting__item sorting__item--by-type" href="#">По типу</a>
             <a class="sorting__item sorting__item--by-name"  href="#">По названию</a>
             <a class="sorting__toggle sorting__toggle--down" href="#">

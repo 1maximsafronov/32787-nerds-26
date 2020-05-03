@@ -7,6 +7,7 @@
 
   let isSortUp = true;
   let activSortType = '';
+  let isSortingActive = false;
   const sortingmenu = document.querySelector('.catalog__sort');
   const toggleByPrice = sortingmenu.querySelector('.sorting__item--by-price');
   const toggleByType = sortingmenu.querySelector('.sorting__item--by-type');
@@ -16,22 +17,19 @@
 
   toggleByPrice.addEventListener('click', function (evt) {
     evt.preventDefault();
-    toggleActiveSortType(SortType.BY_PRICE);
-    toggleActiveSortingItem(toggleByPrice);
+    toggleSortMenuElements(SortType.BY_PRICE, toggleByPrice);
     renderSorteredProducts();
   });
 
   toggleByType.addEventListener('click', function (evt) {
     evt.preventDefault();
-    toggleActiveSortType(SortType.BY_TYPE);
-    toggleActiveSortingItem(toggleByType);
+    toggleSortMenuElements(SortType.BY_TYPE, toggleByType);
     renderSorteredProducts();
   });
 
   toggleByName.addEventListener('click', function (evt) {
     evt.preventDefault();
-    toggleActiveSortType(SortType.BY_NAME);
-    toggleActiveSortingItem(toggleByName);
+    toggleSortMenuElements(SortType.BY_NAME, toggleByName);
     renderSorteredProducts();
   });
 
@@ -39,6 +37,7 @@
     evt.preventDefault();
     let products = window.catalog.getLoadedProducts();
     isSortUp = false;
+    toggleActiveSortingToggler();
     renderSorteredProducts();
   });
 
@@ -46,8 +45,16 @@
     evt.preventDefault();
     let products = window.catalog.getLoadedProducts();
     isSortUp = true;
+    toggleActiveSortingToggler();
     renderSorteredProducts();
   });
+
+  function toggleSortMenuElements(sortType, sortMenuItem) {
+    toggleActiveSortType(sortType);
+    toggleActiveSortingItem(sortMenuItem);
+    toggleActiveSortingToggler();
+    isSortingActive = true;
+  }
 
   function toggleActiveSortType(sortType) {
     if(activSortType === sortType) {
@@ -55,16 +62,22 @@
     }
     activSortType = sortType;
   }
+
   function toggleActiveSortingItem(sortinItem) {
     let activeSortinItem = sortingmenu.querySelector('.sorting__item--active');
-    activeSortinItem.classList.remove('sorting__item--active');
+    if (activeSortinItem) {
+      activeSortinItem.classList.remove('sorting__item--active');
+    }
     sortinItem.classList.add('sorting__item--active');
   }
 
   function toggleActiveSortingToggler() {
-    let activeSortinItem = sortingmenu.querySelector('.sorting__toggle--active');
-    activeSortinItem.classList.remove('sorting__toggle--active');
-    if(isSortUp) {
+    let activeSortingRoggler = sortingmenu.querySelector('.sorting__toggle--active');
+    if (activeSortingRoggler) {
+      activeSortingRoggler.classList.remove('sorting__toggle--active');
+    }
+
+    if (isSortUp) {
       toggleUp.classList.add('sorting__toggle--active');
     }
     else {
@@ -72,11 +85,6 @@
     }
   }
 
-function renderSorteredProducts() {
-  let products = window.catalog.getLoadedProducts();
-  window.catalog.render(sortProducts(products, activSortType));
-  toggleActiveSortingToggler();
-}
   function sortProducts(products, value) {
     const length = products.length;
     for (var i = 0; i < length-1; i++){
@@ -100,6 +108,16 @@ function renderSorteredProducts() {
     }
 
     return products;
+  }
+
+  function renderSorteredProducts() {
+    let products = window.catalog.getLoadedProducts();
+    window.catalog.render(sortProducts(products, activSortType));
+  }
+
+  window.sortmenu = {
+    isActive: isSortingActive,
+    renderProducts: renderSorteredProducts()
   }
 
 })();

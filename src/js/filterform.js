@@ -5,11 +5,17 @@
   let layoutType;
   let blockFeatures;
 
+  let filteredProducts = [];
+
   filterForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
     layoutType = filterForm.querySelector('input[name="layout-radio"]:checked');
     blockFeatures = filterForm.querySelectorAll('.filters__group--features input[type="checkbox"]:checked');
     filterProducts();
+    renderFilteredProducts();
+    if (window.sortmenu.isActive) {
+      window.sortmenu.renderProducts;
+    }
   });
 
   function setMinPrice(value) {
@@ -23,18 +29,23 @@
   function filterProducts() {
     let products = window.data.getProducts();
 
-    let filteredProducts = products.filter(function (product) {
+    filteredProducts = products.filter(function (product) {
       if (checkLayout(product.layout) && checkPrice(product.price)) {
         return true;
       }
       return false;
     });
 
+
+  }
+
+  function renderFilteredProducts() {
     window.catalog.render(filteredProducts);
+    filteredProducts = [];
   }
 
   function checkLayout(layout){
-    return layoutType.value === layout;
+    return layoutType.value == 'any' || layoutType.value === layout;
   }
 
   function checkPrice(price) {
