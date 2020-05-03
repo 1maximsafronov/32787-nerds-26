@@ -1,5 +1,5 @@
 (function () {
-  const catalogtList = document.querySelector('.catalog__list');
+  const catalogtList = document.querySelector(`.catalog__list`);
   let loadedProducts = [];
 
   function render(products) {
@@ -14,7 +14,7 @@
   }
 
   function removeProducts() {
-    let products = catalogtList.querySelectorAll('.product');
+    let products = catalogtList.querySelectorAll(`.product`);
 
     products.forEach(function (product) {
       product.remove();
@@ -26,7 +26,7 @@
   }
 
   window.catalog = {
-    render: render,
-    getLoadedProducts: getLoadedProducts
-  }
+    render,
+    getLoadedProducts,
+  };
 })();

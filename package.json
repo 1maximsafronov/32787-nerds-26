@@ -19,6 +19,8 @@
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "editorconfig": "^0.15.3",
+    "eslint": "^6.8.0",
+    "eslint-config-htmlacademy": "^0.5.2",
     "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -44,12 +46,13 @@
     "stylelint-config-htmlacademy": "^0.1.4"
   },
   "scripts": {
-    "setup-gulp": "npm install --save-dev @htmlacademy/editorconfig-cli autoprefixer browser-sync del gh-pages gulp gulp-csso gulp-htmlmin gulp-imagemin gulp-plumber gulp-postcss gulp-posthtml gulp-rename gulp-sass gulp-sourcemaps gulp-svgstore gulp-uglify gulp-webp node-normalize-scss posthtml-include stylelint stylelint-config-htmlacademy",
-    "build": "gulp build",
     "start": "gulp start",
-    "test": "editorconfig-cli",
-    "js": "gulp js",
-    "publish": "gulp publish"
+    "build": "gulp build",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "publish": "gulp publish",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "eslint": "eslint src/**/*.js"
   },
   "browserslist": [
     "last 2 versions",

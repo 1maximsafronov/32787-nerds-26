@@ -9,11 +9,11 @@
   }
 
   function onError(errorMessage) {
-    let node = document.createElement('div');
-    node.classList.add('error-data-load');
-    node.textContent = errorMessage + ' Мы сгенерировали случайные объявления';
-    node.backgroundColor = 'red';
-    node.color = 'white';
+    let node = document.createElement(`div`);
+    node.classList.add(`error-data-load`);
+    node.textContent = errorMessage + ` Мы сгенерировали случайные объявления`;
+    node.backgroundColor = `red`;
+    node.color = `white`;
     document.body.appendChild(node);
 
     function hideError() {
@@ -32,7 +32,7 @@
   }
 
   window.data = {
-    load: load,
-    getProducts: getProducts
+    load,
+    getProducts,
   };
 })();

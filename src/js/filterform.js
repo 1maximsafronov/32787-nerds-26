@@ -1,20 +1,18 @@
 (function () {
-  const filterForm = document.querySelector('.filters__form');
-  const minPrice = filterForm.querySelector('.price-filter__min');
-  const maxPrice = filterForm.querySelector('.price-filter__max');
+  const filterForm = document.querySelector(`.filters__form`);
+  const minPrice = filterForm.querySelector(`.price-filter__min`);
+  const maxPrice = filterForm.querySelector(`.price-filter__max`);
   let layoutType;
-  let blockFeatures;
 
   let filteredProducts = [];
 
-  filterForm.addEventListener('submit', function (evt) {
+  filterForm.addEventListener(`submit`, function (evt) {
     evt.preventDefault();
-    layoutType = filterForm.querySelector('input[name="layout-radio"]:checked');
-    blockFeatures = filterForm.querySelectorAll('.filters__group--features input[type="checkbox"]:checked');
+    layoutType = filterForm.querySelector(`input[name="layout-radio"]:checked`);
     filterProducts();
     renderFilteredProducts();
     if (window.sortmenu.isActive) {
-      window.sortmenu.renderProducts;
+      window.sortmenu.renderProducts();
     }
   });
 
@@ -36,7 +34,6 @@
       return false;
     });
 
-
   }
 
   function renderFilteredProducts() {
@@ -44,8 +41,8 @@
     filteredProducts = [];
   }
 
-  function checkLayout(layout){
-    return layoutType.value == 'any' || layoutType.value === layout;
+  function checkLayout(layout) {
+    return layoutType.value === `any` || layoutType.value === layout;
   }
 
   function checkPrice(price) {
@@ -53,7 +50,7 @@
   }
 
   window.filterform = {
-    setMaxPrice: setMaxPrice,
-    setMinPrice: setMinPrice
+    setMaxPrice,
+    setMinPrice,
   };
 })();
