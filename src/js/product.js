@@ -1,19 +1,16 @@
 (function () {
-  const productTemplate = document.querySelector(`#product`).content.querySelector(`.product`);
-
   function createElement(product) {
-    let productElement = productTemplate.cloneNode(true);
-    let productTitle = productElement.querySelector(`.product__title`);
-    let productDesc = productElement.querySelector(`.product__desc`);
-    let productPrice = productElement.querySelector(`.product__buy`);
-    let productPicture = productElement.querySelector(`.product__image`);
-
-    productTitle.textContent = product.title;
-    productDesc.textContent = product.desc;
-    productPrice.textContent = formatePriceString(product.price) + ` Руб.`;
-    productPicture.src = product.picture;
-    productPicture.alt = product.title + ` - ` + product.desc;
-
+    let productElement = document.createElement(`li`);
+    productElement.classList.add(`catalog__item`, `product`);
+    productElement.innerHTML = `
+    <p class="product__picture">
+      <img class="product__image" width="360" height="576" src="${product.picture}" alt="${product.title} - ${product.desc}">
+    </p>
+    <div class="product__info">
+      <a class="product__title" href="#">${product.title}</a>
+      <p class="product__desc">${product.desc}</p>
+      <a class="product__buy btn  btn--red" href="#">${formatePriceString(product.price)} Руб.</a>
+    </div>`;
     return productElement;
   }
 
