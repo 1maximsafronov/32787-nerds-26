@@ -1,4 +1,5 @@
-function activate(slider) {
+(function () {
+  const slider = document.querySelector('.promo__slider');
   const sliderItems = slider.querySelectorAll('.slider__item');
   const sliderToggles = slider.querySelectorAll('.slider__toggle');
 
@@ -14,8 +15,4 @@ function activate(slider) {
       sliderItems[i].classList.add('slider__item--show');
     }
   }
-}
-
-export const slider = {
-  activate: activate
-};
+})();

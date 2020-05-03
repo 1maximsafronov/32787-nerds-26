@@ -1,61 +1,60 @@
-[
-  {
-    "title":"Sedona",
-    "desc":"Информационный сайт для туристов",
-    "price":9900,
-    "picture":"img/img-sedona.jpg",
-    "layout":"adaptive",
-    "blocks":[
+[{
+    "title": "Sedona",
+    "desc": "Информационный сайт для туристов",
+    "price": 7000,
+    "picture": "img/img-sedona.jpg",
+    "layout": "adaptive",
+    "blocks": [
 
     ]
   },
   {
-    "title":"Pink App",
-    "desc":"Продуктовый лендинг приложения для iOS и Android",
-    "price":9900,
-    "picture":"img/img-pink.jpg",
-    "layout":"adaptive",
-    "blocks":[
-
-    ]
-  },
-  {
-    "title":"Barbershop",
-    "desc":"Сайт салона красоты. Для мужчин, да.",
-    "price":9900,
-    "picture":"img/img-barbershop.jpg",
-    "layout":"fixed",
-    "blocks":[
-
-    ]
-  },
-  {
-    "title":"Mishka",
-    "desc":"Интернет-магазин вязаных игрушек",
-    "price":9900,
-    "picture":"img/img-mishka.jpg",
-    "layout":"adaptive",
-    "blocks":[
-
-    ]
-  },
-  {
-    "title":"A Plus",
-    "desc":"Лендинг курсов повышения квалификации",
+    "title": "Pink App",
+    "desc": "Продуктовый лендинг приложения для iOS и Android",
     "price": 9900,
-    "picture":"img/img-aplus.jpg",
-    "layout":"fixed",
-    "blocks":[
+    "picture": "img/img-pink.jpg",
+    "layout": "adaptive",
+    "blocks": [
 
     ]
   },
   {
-    "title":"Кваст",
-    "desc":"Промо-сайт производителя крафтового кваса",
+    "title": "Barbershop",
+    "desc": "Сайт салона красоты. Для мужчин, да.",
+    "price": 5000,
+    "picture": "img/img-barbershop.jpg",
+    "layout": "fixed",
+    "blocks": [
+
+    ]
+  },
+  {
+    "title": "Mishka",
+    "desc": "Интернет-магазин вязаных игрушек",
+    "price": 10000,
+    "picture": "img/img-mishka.jpg",
+    "layout": "adaptive",
+    "blocks": [
+
+    ]
+  },
+  {
+    "title": "A Plus",
+    "desc": "Лендинг курсов повышения квалификации",
     "price": 9900,
-    "picture":"img/img-kvast.jpg",
-    "layout":"fixed",
-    "blocks":[
+    "picture": "img/img-aplus.jpg",
+    "layout": "fixed",
+    "blocks": [
+
+    ]
+  },
+  {
+    "title": "Кваст",
+    "desc": "Промо-сайт производителя крафтового кваса",
+    "price": 4500,
+    "picture": "img/img-kvast.jpg",
+    "layout": "fixed",
+    "blocks": [
 
     ]
   }
