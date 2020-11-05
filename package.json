@@ -40,7 +40,7 @@
     "posthtml-include": "^1.4.3",
     "rollup": "^2.7.6",
     "rollup-plugin-babel": "^4.4.0",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.7.2",
     "stylelint-config-htmlacademy": "^0.1.4"
   },
   "scripts": {
