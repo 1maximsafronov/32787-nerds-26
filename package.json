@@ -12,7 +12,7 @@
     "url": "git+https://github.com/1maximsafronov/32787-nerds-26.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.6",
+    "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.9.6",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^9.7.6",
